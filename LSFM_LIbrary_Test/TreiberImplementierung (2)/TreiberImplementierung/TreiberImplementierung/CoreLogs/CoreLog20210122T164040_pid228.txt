@@ -1,0 +1,12 @@
+2021-01-22T16:40:40.073263 tid19740 [IFO,LogManager] Enabled primary log file C:\Users\User\Documents\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\CoreLogs\CoreLog20210122T164040_pid228.txt
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] User: User
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] Host: Laptop-3DP
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] MM Studio version: 2.0.0-gamma1 20190627
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] MMCore version 9.0.0
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] Device API version 69, Module API version 10
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] Operating System: Windows 10 (amd64) 10.0
+2021-01-22T16:40:40.073263 tid19740 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_152, 64-bit
+2021-01-22T16:40:40.090022 tid19740 [IFO,App] Finished waiting for plugins to load
+2021-01-22T16:41:12.170408 tid19740 [IFO,Core] Did unload all devices
+2021-01-22T16:41:12.170408 tid19740 [IFO,Core] System reset
+2021-01-22T16:41:12.170408 tid19740 [IFO,Core] Core session ended

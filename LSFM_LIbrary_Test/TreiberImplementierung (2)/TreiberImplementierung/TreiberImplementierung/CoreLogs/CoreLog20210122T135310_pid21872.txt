@@ -1,0 +1,72 @@
+2021-01-22T13:53:10.299104 tid22464 [IFO,LogManager] Enabled primary log file C:\Users\User\Documents\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\CoreLogs\CoreLog20210122T135310_pid21872.txt
+2021-01-22T13:53:10.299104 tid22464 [IFO,App] User: User
+2021-01-22T13:53:10.300100 tid22464 [IFO,App] Host: Laptop-3DP
+2021-01-22T13:53:10.300100 tid22464 [IFO,App] MM Studio version: 2.0.0-gamma1 20190627
+2021-01-22T13:53:10.300100 tid22464 [IFO,App] MMCore version 9.0.0
+2021-01-22T13:53:10.300100 tid22464 [IFO,App] Device API version 69, Module API version 10
+2021-01-22T13:53:10.300100 tid22464 [IFO,App] Operating System: Windows 10 (amd64) 10.0
+2021-01-22T13:53:10.300100 tid22464 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_152, 64-bit
+2021-01-22T13:53:10.333213 tid22464 [IFO,App] Finished waiting for plugins to load
+2021-01-22T13:53:52.719013 tid22464 [IFO,Core] Did unload all devices
+2021-01-22T13:53:52.724023 tid22464 [IFO,Core] Did unload all devices
+2021-01-22T13:53:52.745005 tid22464 [IFO,Core] Did load device COM5 from SerialManager; label = COM5
+2021-01-22T13:53:52.745005 tid22464 [IFO,Core] Did load device COM6 from SerialManager; label = COM6
+2021-01-22T13:53:52.745984 tid22464 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2021-01-22T13:53:52.745984 tid22464 [IFO,Core] Did load device COM4 from SerialManager; label = COM4
+2021-01-22T13:53:52.754939 tid22464 [WRN,Core:dev:PI_Contr_Y] Requested device named "C-863.11" but the actual device is named "PI_GCSController"
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device C-863.11 from PI_GCS_2; label = PI_Contr_Y
+2021-01-22T13:53:52.754939 tid22464 [WRN,Core:dev:PI_Contr_Z] Requested device named "C-863.11" but the actual device is named "PI_GCSController"
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device C-863.11 from PI_GCS_2; label = PI_Contr_Z
+2021-01-22T13:53:52.754939 tid22464 [WRN,Core:dev:PI_Contr_X] Requested device named "C-863.11" but the actual device is named "PI_GCSController"
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device C-863.11 from PI_GCS_2; label = PI_Contr_X
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device PIXYStage from PI_GCS_2; label = PI_XY_Stages
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device PI_GCSController from PI_GCS_2; label = PIMag_Contr
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device PIZStage from PI_GCS_2; label = FocusStage
+2021-01-22T13:53:52.754939 tid22464 [IFO,Core] Did load device PIZStage from PI_GCS_2; label = ZPositionStage
+2021-01-22T13:53:52.764928 tid22464 [WRN,Core:dev:laser_488] Requested device named "Omicron USB" but the actual device is named "Omicron"
+2021-01-22T13:53:52.764928 tid22464 [IFO,Core] Did load device Omicron USB from Omicron; label = laser_488
+2021-01-22T13:53:52.764928 tid22464 [WRN,Core:dev:laser_638] Requested device named "Omicron USB" but the actual device is named "Omicron"
+2021-01-22T13:53:52.764928 tid22464 [IFO,Core] Did load device Omicron USB from Omicron; label = laser_638
+2021-01-22T13:53:52.778093 tid22464 [IFO,Core] Unloading all devices after failure to load system configuration
+2021-01-22T13:53:52.778093 tid22464 [IFO,Core] Did unload all devices
+2021-01-22T13:53:52.778093 tid22464 [IFO,Core] Now rethrowing original error from system configuration loading
+2021-01-22T13:53:52.788894 tid22464 [IFO,App] Failed to load hardware configuration
+                                    [       ] java.lang.Exception: Line 20: Device,pco_camera,PCO_Camera,pco_camera
+                                    [       ] Failed to load device "pco_camera" from adapter module "PCO_Camera" [ Failed to load device adapter "PCO_Camera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0gamma\mmgr_dal_PCO_Camera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ] ]
+                                    [       ] 
+                                    [       ]  in Thread[AWT-EventQueue-0,6,main]
+                                    [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                    [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:384)
+                                    [       ]   at org.micromanager.profile.internal.gui.HardwareConfigurationManager.loadConfigImpl(HardwareConfigurationManager.java:148)
+                                    [       ]   at org.micromanager.profile.internal.gui.HardwareConfigurationManager.loadHardwareConfiguration(HardwareConfigurationManager.java:125)
+                                    [       ]   at org.micromanager.internal.MMStudio.loadSystemConfiguration(MMStudio.java:1302)
+                                    [       ]   at org.micromanager.internal.MMStudio.<init>(MMStudio.java:387)
+                                    [       ]   at MMStudioPlugin$1.run(MMStudioPlugin.java:79)
+                                    [       ]   at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+                                    [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+                                    [       ]   at java.awt.EventQueue.access$500(EventQueue.java:97)
+                                    [       ]   at java.awt.EventQueue$3.run(EventQueue.java:709)
+                                    [       ]   at java.awt.EventQueue$3.run(EventQueue.java:703)
+                                    [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+                                    [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+                                    [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+                                    [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+                                    [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+                                    [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+                                    [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+                                    [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2021-01-22T13:53:56.091011 tid22464 [IFO,App] EDTHangLogger: Started monitoring of EDT hangs
+                                    [       ] [heartbeat timeout = 4500 ms, hang check interval = 1000 ms]
+2021-01-22T13:53:56.378809 tid22464 [IFO,App] Rebuilding config group table
+2021-01-22T13:53:56.378809 tid22464 [IFO,App] Finished rebuilding config group table
+2021-01-22T13:53:56.395719 tid22464 [IFO,App] Startup script (C:\Users\User\Documents\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\MMStartup.bsh) not present
+2021-01-22T13:53:56.395719 tid22464 [IFO,App] Updating GUI; config pad = true; from cache = false
+2021-01-22T13:53:56.400704 tid22464 [IFO,App] Rebuilding config group table
+2021-01-22T13:53:56.400704 tid22464 [IFO,App] Finished rebuilding config group table
+2021-01-22T13:53:56.400704 tid22464 [IFO,Core] Did update system state cache
+2021-01-22T13:53:56.400704 tid22464 [IFO,App] Finished updating GUI
+2021-01-22T13:53:59.325785 tid22464 [IFO,App] EDTHangLogger: Stopping monitoring of EDT hangs
+2021-01-22T13:53:59.325785 tid22464 [IFO,Core] Did unload all devices
+2021-01-22T13:53:59.325785 tid22464 [IFO,Core] System reset
+2021-01-22T13:53:59.325785 tid22464 [IFO,Core] Core session ended

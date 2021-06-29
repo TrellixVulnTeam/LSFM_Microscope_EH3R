@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c1ed93d-d402-4d72-a855-0ef4ab64a156" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iUng8dMkteZD60DNtsY4kz6kWe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LSFM_View.py" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.Controller">
+    <configuration name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LSFM_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LSFM_View" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LSFM_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LSFM_View.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="LSFM_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LSFM_View.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Controller" />
+      <item itemvalue="Python.LSFM_View" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Controller" />
+        <item itemvalue="Python.LSFM_View" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c1ed93d-d402-4d72-a855-0ef4ab64a156" name="Default Changelist" comment="" />
+      <created>1601971146668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601971146668</updated>
+      <workItem from="1601971155802" duration="1572000" />
+      <workItem from="1601974347740" duration="7045000" />
+      <workItem from="1602149989382" duration="3723000" />
+      <workItem from="1602168966929" duration="440000" />
+      <workItem from="1602180755253" duration="7695000" />
+      <workItem from="1602220821504" duration="2715000" />
+      <workItem from="1602239264396" duration="2008000" />
+      <workItem from="1603443391101" duration="68000" />
+      <workItem from="1603609454655" duration="11550000" />
+      <workItem from="1604484482235" duration="20882000" />
+      <workItem from="1604592063448" duration="224000" />
+      <workItem from="1605183378377" duration="7503000" />
+      <workItem from="1607074083027" duration="294000" />
+      <workItem from="1607172759917" duration="345000" />
+      <workItem from="1607805804171" duration="49000" />
+      <workItem from="1608115370636" duration="808000" />
+      <workItem from="1608116237916" duration="31556000" />
+      <workItem from="1610481843044" duration="509000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="254" y="234" width="1092" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622624584747">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="254" y="234" width="1092" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.1160@0.0.1600.1160" timestamp="1622624584747" />
+    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1621951245032">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="956" height="466" key="DebuggerActiveHint/0.0.1600.1160@0.0.1600.1160" timestamp="1621951245032" />
+    <state x="580" y="370" key="FileChooserDialogImpl" timestamp="1622021848943">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="580" y="370" key="FileChooserDialogImpl/0.0.1600.1160@0.0.1600.1160" timestamp="1622021848943" />
+    <state width="1579" height="396" key="GridCell.Tab.0.bottom" timestamp="1624278965220">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
+    <state width="1579" height="396" key="GridCell.Tab.0.center" timestamp="1624278965220">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
+    <state width="1579" height="396" key="GridCell.Tab.0.left" timestamp="1624278965220">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
+    <state width="1579" height="396" key="GridCell.Tab.0.right" timestamp="1624278965220">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
+    <state width="1579" height="396" key="GridCell.Tab.1.bottom" timestamp="1624278965221">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.1.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
+    <state width="1579" height="396" key="GridCell.Tab.1.center" timestamp="1624278965221">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.1.center/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
+    <state width="1579" height="396" key="GridCell.Tab.1.left" timestamp="1624278965221">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.1.left/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
+    <state width="1579" height="396" key="GridCell.Tab.1.right" timestamp="1624278965221">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1579" height="396" key="GridCell.Tab.1.right/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
+    <state x="521" y="233" key="SettingsEditor" timestamp="1624355476211">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="521" y="233" key="SettingsEditor/0.0.1600.1160@0.0.1600.1160" timestamp="1624355476211" />
+    <state x="92" y="92" width="1416" height="976" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1623144836078">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="92" y="92" width="1416" height="976" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.1160@0.0.1600.1160" timestamp="1623144836078" />
+    <state x="498" y="268" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1622462453066">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="498" y="268" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.1160@0.0.1600.1160" timestamp="1622462453066" />
+    <state x="362" y="308" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621409522196">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="362" y="308" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.1160@0.0.1600.1160" timestamp="1621409522196" />
+    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1622541835887">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1600.1160@0.0.1600.1160" timestamp="1622541835887" />
+  </component>
+</project>

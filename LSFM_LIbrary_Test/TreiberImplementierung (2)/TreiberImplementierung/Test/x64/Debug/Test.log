@@ -1,0 +1,17 @@
+﻿  LSFM_Camera.cpp
+  This header file is marked as obsolete. Please use PCO_GetErrorTextSDK instead
+  If you still need access to the texts please use PCO_errtext.h.
+  PCO_errt.h will be removed in future SDK releases.
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(113,75): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(116,75): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(284,20): warning C4553: "==": Ergebnis des Ausdrucks nicht verwendet. War "=" gemeint?
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(302,60): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(363,14): warning C4244: "return": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(371,26): warning C4244: "Initialisierung": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
+  Test.cpp
+  This header file is marked as obsolete. Please use PCO_GetErrorTextSDK instead
+  If you still need access to the texts please use PCO_errtext.h.
+  PCO_errt.h will be removed in future SDK releases.
+  Code wird generiert...
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Test\LSFM_Camera.cpp(82): warning C4715: "LSFM_Camera::SetRecordingstate": Nicht alle Codepfade geben einen Wert zurück.
+  Test.vcxproj -> C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\x64\Debug\Test.exe

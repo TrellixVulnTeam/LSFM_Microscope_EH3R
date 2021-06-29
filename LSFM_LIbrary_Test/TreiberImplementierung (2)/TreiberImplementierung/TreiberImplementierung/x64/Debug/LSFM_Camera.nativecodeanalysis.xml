@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\include\</FILEPATH>
+      <FILENAME>file12.cpp</FILENAME>
+      <LINE>618</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetischer Überlauf: Wenn Sie den Operator "*" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator "*" verwenden, um einen Überlauf zu vermeiden (io.2).</DESCRIPTION>
+    <FUNCTION>store_fits_exp</FUNCTION>
+    <DECORATED>?store_fits_exp@@YAHPEADHHPEAXH@Z</DECORATED>
+    <FUNCLINE>555</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\include\</FILEPATH>
+      <FILENAME>file12.cpp</FILENAME>
+      <LINE>701</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetischer Überlauf: Wenn Sie den Operator "*" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator "*" verwenden, um einen Überlauf zu vermeiden (io.2).</DESCRIPTION>
+    <FUNCTION>store_fits</FUNCTION>
+    <DECORATED>?store_fits@@YAHPEADHHHPEAX@Z</DECORATED>
+    <FUNCLINE>640</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.cpp</FILENAME>
+      <LINE>284</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetischer Überlauf: Wenn Sie den Operator "-" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator "-" verwenden, um einen Überlauf zu vermeiden (io.2).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::GetAndSave_Image</FUNCTION>
+    <DECORATED>?GetAndSave_Image@LSFM_Camera@@QEAA_NPEAD@Z</DECORATED>
+    <FUNCLINE>129</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.cpp</FILENAME>
+      <LINE>220</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>Der Enumerationstyp "PhaseNumber" umfasst keine Bereichseinschränkung. Geben Sie "enum class" Vorrang vor "enum" (Enum.3).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::GetAndSave_Image</FUNCTION>
+    <DECORATED>?GetAndSave_Image@LSFM_Camera@@QEAA_NPEAD@Z</DECORATED>
+    <FUNCLINE>129</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.cpp</FILENAME>
+      <LINE>862</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>Der Enumerationstyp "PhaseSymmetry" umfasst keine Bereichseinschränkung. Geben Sie "enum class" Vorrang vor "enum" (Enum.3).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::SetFlimPhaseSequenceParameter</FUNCTION>
+    <DECORATED>?SetFlimPhaseSequenceParameter@LSFM_Camera@@UEAA_NW4PhaseNumber@@W4PhaseSymmetry@@W4PhaseOrder@@W4TapSelect@@@Z</DECORATED>
+    <FUNCLINE>862</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.cpp</FILENAME>
+      <LINE>862</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>Der Enumerationstyp "PhaseOrder" umfasst keine Bereichseinschränkung. Geben Sie "enum class" Vorrang vor "enum" (Enum.3).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::SetFlimPhaseSequenceParameter</FUNCTION>
+    <DECORATED>?SetFlimPhaseSequenceParameter@LSFM_Camera@@UEAA_NW4PhaseNumber@@W4PhaseSymmetry@@W4PhaseOrder@@W4TapSelect@@@Z</DECORATED>
+    <FUNCLINE>862</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.cpp</FILENAME>
+      <LINE>862</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>Der Enumerationstyp "TapSelect" umfasst keine Bereichseinschränkung. Geben Sie "enum class" Vorrang vor "enum" (Enum.3).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::SetFlimPhaseSequenceParameter</FUNCTION>
+    <DECORATED>?SetFlimPhaseSequenceParameter@LSFM_Camera@@UEAA_NW4PhaseNumber@@W4PhaseSymmetry@@W4PhaseOrder@@W4TapSelect@@@Z</DECORATED>
+    <FUNCLINE>862</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

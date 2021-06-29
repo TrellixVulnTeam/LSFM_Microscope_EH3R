@@ -1,0 +1,9 @@
+﻿  TreiberImplementierung.cpp
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(461,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(471,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(567,23): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(570,24): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(623,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(650,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(600): warning C4715: "Composite::CompareWithConfigFile": Nicht alle Codepfade geben einen Wert zurück.
+  TreiberImplementierung.vcxproj -> C:\Users\admin\Documents\Visual Studio 2019\lsm_test\TreiberImplementierung\Debug\TreiberImplementierung.exe

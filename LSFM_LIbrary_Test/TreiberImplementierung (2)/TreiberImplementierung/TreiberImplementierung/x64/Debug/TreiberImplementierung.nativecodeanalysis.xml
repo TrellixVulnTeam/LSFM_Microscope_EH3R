@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>Component.h</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "Component::controllerStage" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@@QEAA@XZ</DECORATED>
+    <FUNCLINE>16</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Component::controllerStage</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::hCamArr" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::hCamArr</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::tapSelect" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::tapSelect</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::phaseOrder" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::phaseOrder</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::phasesymmetry" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::phasesymmetry</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::phasenumber" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::phasenumber</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::iRet" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::iRet</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::ModFrequency" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::ModFrequency</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::waveform" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::waveform</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::cameraMode" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::cameraMode</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::dwExposure" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::dwExposure</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::dwDelay" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::dwDelay</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::RecordingState" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::RecordingState</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::strDescription" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::strDescription</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::cameraWarning" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::cameraWarning</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::cameraError" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::cameraError</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::cameraStatus" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::cameraStatus</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::maxImgCountArr" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::maxImgCountArr</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>TreiberImplementierung.cpp</FILENAME>
+      <LINE>232</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6273</DEFECTCODE>
+    <DESCRIPTION>Eine Nichtganzzahl wurde als _Param_(3) übergeben. Im Aufruf von "sprintf_s" ist jedoch eine Ganzzahl erforderlich. Tatsächlicher Typ: "double". Wenn ein Zeigerwert übergeben wird, sollte %p verwendet werden.</DESCRIPTION>
+    <FUNCTION>NormalModeImageSequence</FUNCTION>
+    <DECORATED>?NormalModeImageSequence@@YAXPEBDHV?$vector@NV?$allocator@N@std@@@std@@111@Z</DECORATED>
+    <FUNCLINE>224</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>TreiberImplementierung.cpp</FILENAME>
+      <LINE>232</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6273</DEFECTCODE>
+    <DESCRIPTION>Eine Nichtganzzahl wurde als _Param_(4) übergeben. Im Aufruf von "sprintf_s" ist jedoch eine Ganzzahl erforderlich. Tatsächlicher Typ: "double". Wenn ein Zeigerwert übergeben wird, sollte %p verwendet werden.</DESCRIPTION>
+    <FUNCTION>NormalModeImageSequence</FUNCTION>
+    <DECORATED>?NormalModeImageSequence@@YAXPEBDHV?$vector@NV?$allocator@N@std@@@std@@111@Z</DECORATED>
+    <FUNCLINE>224</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

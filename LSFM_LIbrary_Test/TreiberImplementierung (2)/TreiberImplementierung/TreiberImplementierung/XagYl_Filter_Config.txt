@@ -1,0 +1,6 @@
+COM->11
+position1->ZET 488/640 M
+position2->Empty1
+position3->Empty2
+position4->Empty3
+position5->Empty4
