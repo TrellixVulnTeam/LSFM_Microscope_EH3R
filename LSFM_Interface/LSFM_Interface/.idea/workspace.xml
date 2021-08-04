@@ -1,7 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c1ed93d-d402-4d72-a855-0ef4ab64a156" name="Default Changelist" comment="" />
+    <list default="true" id="3c1ed93d-d402-4d72-a855-0ef4ab64a156" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/LSFM_Software.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface_v2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSFM_View.py" beforeDir="false" afterPath="$PROJECT_DIR$/LSFM_View.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/ipch/AutoPCH/d55bed4074105db/TREIBERIMPLEMENTIERUNG.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/ipch/AutoPCH/d55bed4074105db/TREIBERIMPLEMENTIERUNG.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/ipch/AutoPCH/ee08646902b0267d/LSFM_LASER.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/.vs/TreiberImplementierung/v16/ipch/AutoPCH/ee08646902b0267d/LSFM_LASER.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/GlobalFunctions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/GlobalFunctions.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/LSFM_Laser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/LSFM_Laser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/LSFM_Laser.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/LSFM_Laser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/LaserConfigFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/LaserConfigFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/TreiberImplementierung.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/TreiberImplementierung.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/GlobalFunctions.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/GlobalFunctions.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/GlobalFunctions.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/GlobalFunctions.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Camera.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Camera.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Camera.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Camera.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Laser.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Laser.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Laser.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/LSFM_Laser.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberI.02AF091F.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberI.02AF091F.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberI.02AF091F.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberI.02AF091F.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberI.02AF091F.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberI.02AF091F.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.nativecodeanalysis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.nativecodeanalysis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/TreiberImplementierung.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/XagYl_Filter.nativecodeanalysis.sarif" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/XagYl_Filter.nativecodeanalysis.sarif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/XagYl_Filter.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/XagYl_Filter.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/vc.nativecodeanalysis.all.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/vc.nativecodeanalysis.all.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/TreiberImplementierung/x64/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/bin64/TreiberImplementierung.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/bin64/TreiberImplementierung.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/bin64/TreiberImplementierung.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/bin64/TreiberImplementierung.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/bin64/TreiberImplementierung.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../LSFM_LIbrary_Test/TreiberImplementierung (2)/TreiberImplementierung/bin64/TreiberImplementierung.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/.vs/LSFMLibrary/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/.vs/LSFMLibrary/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/.vs/LSFMLibrary/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/.vs/LSFMLibrary/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/ILaserController.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/ILaserController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFMLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFMLibrary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFMLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFMLibrary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFM_Laser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFM_Laser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFM_Laser.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFM_Laser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFM_Motion_PI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LSFM_Motion_PI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LaserConfigFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/LaserConfigFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/Composite.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/Composite.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/GlobalFunctions.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/GlobalFunctions.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.Build.CppClean.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.pch" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.pch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFMLibrary.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFM_Camera.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFM_Camera.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFM_Laser.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFM_Laser.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFM_Motion_PI.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/LSFM_Motion_PI.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/XagylFilter.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/XagylFilter.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/dllmain.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/dllmain.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/pch.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/pch.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/LSFMLibrary/x64/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.exp" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.lib" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../TreiberImplementierung/bin64/LSFMLibrary.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +98,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1iUng8dMkteZD60DNtsY4kz6kWe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,6 +110,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/LSFM_View.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -29,7 +118,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Controller">
+  <component name="RunManager" selected="Python.LSFM_View">
     <configuration name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LSFM_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,8 +188,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Controller" />
         <item itemvalue="Python.LSFM_View" />
+        <item itemvalue="Python.Controller" />
       </list>
     </recent_temporary>
   </component>
@@ -139,59 +228,71 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="254" y="234" width="1092" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622624584747">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
     <state x="254" y="234" width="1092" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.1160@0.0.1600.1160" timestamp="1622624584747" />
-    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1621951245032">
+    <state width="956" height="466" key="DebuggerActiveHint" timestamp="1627908824809">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="956" height="466" key="DebuggerActiveHint/0.0.1600.1160@0.0.1600.1160" timestamp="1621951245032" />
+    <state width="956" height="466" key="DebuggerActiveHint/0.0.1600.1160@0.0.1600.1160" timestamp="1627908824809" />
     <state x="580" y="370" key="FileChooserDialogImpl" timestamp="1622021848943">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
     <state x="580" y="370" key="FileChooserDialogImpl/0.0.1600.1160@0.0.1600.1160" timestamp="1622021848943" />
-    <state width="1579" height="396" key="GridCell.Tab.0.bottom" timestamp="1624278965220">
+    <state width="1579" height="321" key="GridCell.Tab.0.bottom" timestamp="1627974014892">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
-    <state width="1579" height="396" key="GridCell.Tab.0.center" timestamp="1624278965220">
+    <state width="1579" height="321" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1627974014892" />
+    <state width="1579" height="321" key="GridCell.Tab.0.center" timestamp="1627974014892">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
-    <state width="1579" height="396" key="GridCell.Tab.0.left" timestamp="1624278965220">
+    <state width="1579" height="321" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1627974014892" />
+    <state width="1579" height="321" key="GridCell.Tab.0.left" timestamp="1627974014891">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
-    <state width="1579" height="396" key="GridCell.Tab.0.right" timestamp="1624278965220">
+    <state width="1579" height="321" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1627974014891" />
+    <state width="1579" height="321" key="GridCell.Tab.0.right" timestamp="1627974014892">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965220" />
-    <state width="1579" height="396" key="GridCell.Tab.1.bottom" timestamp="1624278965221">
+    <state width="1579" height="321" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1627974014892" />
+    <state width="1579" height="396" key="GridCell.Tab.1.bottom" timestamp="1627912800302">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.1.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
-    <state width="1579" height="396" key="GridCell.Tab.1.center" timestamp="1624278965221">
+    <state width="1579" height="396" key="GridCell.Tab.1.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1627912800302" />
+    <state width="1579" height="396" key="GridCell.Tab.1.center" timestamp="1627912800302">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.1.center/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
-    <state width="1579" height="396" key="GridCell.Tab.1.left" timestamp="1624278965221">
+    <state width="1579" height="396" key="GridCell.Tab.1.center/0.0.1600.1160@0.0.1600.1160" timestamp="1627912800302" />
+    <state width="1579" height="396" key="GridCell.Tab.1.left" timestamp="1627912800302">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.1.left/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
-    <state width="1579" height="396" key="GridCell.Tab.1.right" timestamp="1624278965221">
+    <state width="1579" height="396" key="GridCell.Tab.1.left/0.0.1600.1160@0.0.1600.1160" timestamp="1627912800302" />
+    <state width="1579" height="396" key="GridCell.Tab.1.right" timestamp="1627912800302">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1579" height="396" key="GridCell.Tab.1.right/0.0.1600.1160@0.0.1600.1160" timestamp="1624278965221" />
+    <state width="1579" height="396" key="GridCell.Tab.1.right/0.0.1600.1160@0.0.1600.1160" timestamp="1627912800302" />
     <state x="521" y="233" key="SettingsEditor" timestamp="1624355476211">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
     <state x="521" y="233" key="SettingsEditor/0.0.1600.1160@0.0.1600.1160" timestamp="1624355476211" />
-    <state x="92" y="92" width="1416" height="976" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1623144836078">
+    <state x="92" y="92" width="1416" height="976" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1627995882368">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state x="92" y="92" width="1416" height="976" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.1160@0.0.1600.1160" timestamp="1623144836078" />
+    <state x="92" y="92" width="1416" height="976" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.1160@0.0.1600.1160" timestamp="1627995882368" />
     <state x="498" y="268" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1622462453066">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
@@ -200,9 +301,9 @@
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
     <state x="362" y="308" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.1160@0.0.1600.1160" timestamp="1621409522196" />
-    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1622541835887">
+    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1627983996112">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1600.1160@0.0.1600.1160" timestamp="1622541835887" />
+    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1600.1160@0.0.1600.1160" timestamp="1627983996112" />
   </component>
 </project>

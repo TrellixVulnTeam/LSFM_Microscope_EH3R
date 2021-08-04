@@ -6,8 +6,16 @@
 #define LSFMLIBRARY_API __declspec(dllimport)
 #endif
 
+#include "Component.h"
+#include "GlobalFunctions.h"
 #include "LSFM_Camera.h"
-
+#include "LSFM_Laser.h"
+#include "ILaserController.h"
+#include "LSFM_Motion_PI.h"
+#include "Composite.h"
+#include "ICameraController.h"
+#include "IFilterController.h"
+#include "XagylFilter.h"
 
 extern HANDLE cameraPointer, flimCameraPointer, cameraRecorderPointer, flimCameraRecorderPointer;
 
@@ -21,36 +29,28 @@ extern "C" LSFMLIBRARY_API void MoveRelativ(int stage, double position, bool acq
 
 extern "C" LSFMLIBRARY_API int GetStageActualPosition(int stage);
 
-extern "C" LSFMLIBRARY_API void LaserOn(int wavelength);
+extern "C" LSFMLIBRARY_API void LaserOn(int wavelength, int specPower);
 
-extern "C" LSFMLIBRARY_API void LaserOff(int wavelength);
+extern "C" LSFMLIBRARY_API void LaserOff(int wavelength, int specPower);
 
 extern "C" LSFMLIBRARY_API  bool SingleImageAquisition(int cameratyp, char* filename);
 
-extern "C" LSFMLIBRARY_API int GetActualModulation(int wavelength);
+extern "C" LSFMLIBRARY_API int GetActualModulation(int wavelength, int specPower);
 
-extern "C" LSFMLIBRARY_API int GetModulation(int wavelength);
+extern "C" LSFMLIBRARY_API int GetModulation(int wavelength, int specPower);
 
+extern "C" LSFMLIBRARY_API double GetPowerInPercentage(int wavelength, int specPower);
 
-
-extern "C" LSFMLIBRARY_API double GetPowerInPercentage(int wavelength);
-
-extern "C" LSFMLIBRARY_API double ReadMaxPower(int wavelength);
+extern "C" LSFMLIBRARY_API double ReadMaxPower(int wavelength, int specPower);
 
 
-extern "C" LSFMLIBRARY_API void ReadWaveLength(int* wavelengths);
+extern "C" LSFMLIBRARY_API void SetModulation(int wavelength, int specPower, int modulation);
 
+extern "C" LSFMLIBRARY_API void SetOperatingMode(int wavelength, int specPower, int operantingMode);
 
-extern "C" LSFMLIBRARY_API void SetModulation(int wavelength,int modulation);
-
-extern "C" LSFMLIBRARY_API void SetOperatingMode(int wavelength,int operantingMode);
-
-extern "C" LSFMLIBRARY_API  void SetPower(int value, float power);
-
-extern "C" LSFMLIBRARY_API bool LaserStatus();
+extern "C" LSFMLIBRARY_API  void SetPower(int value, int specPower,  float power);
 
 extern "C" LSFMLIBRARY_API DataPack* LiveView(int camera);
-
 
 extern "C" LSFMLIBRARY_API bool SetFilmPhaseSequenceParameter(int phaseNumber, int phaseSymmetry, int phaseorder, int tapSelect);
 
@@ -63,7 +63,6 @@ extern "C" LSFMLIBRARY_API void GetConnectedCamera(int* listOfAvailableCamera);
 extern "C" LSFMLIBRARY_API void GetConnectedMotions(int* listOfAvailabeMotion);
 
 extern "C" LSFMLIBRARY_API bool GetActualPositions(double* xPosition, double* yPosition, double* zPosition, double* focusPosition);
-
 
 extern "C" LSFMLIBRARY_API void SetExposureTime(int camera, int exposureTime, int delay);
 
@@ -79,6 +78,7 @@ extern "C" LSFMLIBRARY_API void ListNotConnectedHardware(char* arraylist);
 
 extern "C" LSFMLIBRARY_API bool SetFlimParamter(int camera , int phaseNumber, int frequency);
 
+extern "C" LSFMLIBRARY_API bool GetWaveLengthAndSpecPower(Laserpack* LaserList);
 
 
 

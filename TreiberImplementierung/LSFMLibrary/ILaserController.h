@@ -1,4 +1,15 @@
 #pragma once
+
+
+
+
+struct Laserpack
+{
+	int waveLegnth;
+	int specPower;
+};
+
+
 class ILaserController
 {
 public:
@@ -17,5 +28,6 @@ public:
 	virtual int GetActualModulation() = 0;
 	virtual bool IsHardwareConnected() = 0;
 	virtual void SetAnalogImpedanz(int impedanz) = 0;
+	virtual int ReadSpecPower() = 0;
 
 };

@@ -731,6 +731,7 @@ double LSFM_Motion_PI::go_left()
 
 	int  LSFM_Motion_PI::GetStage()
 	{
+
 		return this->stage;
 	}
 
@@ -739,6 +740,7 @@ double LSFM_Motion_PI::go_left()
 	{
 
 		PI_CloseConnection(this->id);
+		this->id = -1;
 	}
 
 	bool LSFM_Motion_PI::IsHardwareConnected()

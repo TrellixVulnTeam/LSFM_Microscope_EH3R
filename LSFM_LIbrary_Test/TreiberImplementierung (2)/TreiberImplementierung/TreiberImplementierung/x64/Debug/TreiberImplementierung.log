@@ -1,23 +1,32 @@
-﻿  LSFM_Camera.cpp
+﻿  GlobalFunctions.cpp
+  LSFM_Laser.cpp
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Laser.cpp(498,19): warning C4244: "Initialisierung": Konvertierung von "float" in "int", möglicher Datenverlust
+  TreiberImplementierung.cpp
   This header file is marked as obsolete. Please use PCO_GetErrorTextSDK instead
   If you still need access to the texts please use PCO_errtext.h.
   PCO_errt.h will be removed in future SDK releases.
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(112,74): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(115,74): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(238,11): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(263,23): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(275,22): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(280,23): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(419,20): warning C4553: "==": Ergebnis des Ausdrucks nicht verwendet. War "=" gemeint?
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(436,60): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(475,64): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(572,23): warning C4244: "=": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(785,15): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(824,26): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(911,59): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(81): warning C4715: "LSFM_Camera::SetRecordingstate": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(668): warning C4715: "LSFM_Camera::SingleImageAquisition": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(859): warning C4715: "LSFM_Camera::Live_View": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(232,23): warning C4477: "sprintf_s": Die Formatzeichenfolge "%02d" erfordert ein Argument vom Typ "int", das variadic-Argument "1" weist aber den Typ "_Ty" auf.
+          with
+          [
+              _Ty=double
+          ]
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(232,23): warning C4477: "sprintf_s": Die Formatzeichenfolge "%02d" erfordert ein Argument vom Typ "int", das variadic-Argument "2" weist aber den Typ "_Ty" auf.
+          with
+          [
+              _Ty=double
+          ]
+  XagYl_Filter.cpp
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\XagYl_Filter.cpp(176,13): warning C4244: "Initialisierung": Konvertierung von "__int64" in "int", möglicher Datenverlust
+  Kompilieren...
+  Code wird generiert...
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\GlobalFunctions.cpp(189): warning C4715: "LaserPortDetection": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Laser.cpp(75): warning C4715: "LSFM_Laser::hex_char_to_bin": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Laser.cpp(100): warning C4715: "LSFM_Laser::hex_str_to_bin_str": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Laser.cpp(522): warning C4715: "LSFM_Laser::ReadWaveLength": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Laser.cpp(577): warning C4715: "LSFM_Laser::ReadMaxPower": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Laser.cpp(627): warning C4715: "LSFM_Laser::GetPowerInpercentage": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(452): warning C4715: "GetExposureTime": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\XagYl_Filter.cpp(181): warning C4715: "LSFM_Filter::GetElementFromConfigFIle": Nicht alle Codepfade geben einen Wert zurück.
   TreiberImplementierung.vcxproj -> C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\bin64\TreiberImplementierung.exe
 C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\include\file12.cpp(618): warning C26451: Arithmetischer Überlauf: Wenn Sie den Operator "*" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator "*" verwenden, um einen Überlauf zu vermeiden (io.2).
 C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\include\file12.cpp(701): warning C26451: Arithmetischer Überlauf: Wenn Sie den Operator "*" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator "*" verwenden, um einen Überlauf zu vermeiden (io.2).
@@ -25,5 +34,5 @@ C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementie
 C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(220): warning C26812: Der Enumerationstyp "PhaseNumber" umfasst keine Bereichseinschränkung. Geben Sie "enum class" Vorrang vor "enum" (Enum.3).
 C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.cpp(862): warning C26812: Der Enumerationstyp "PhaseSymmetry" umfasst keine Bereichseinschränkung. Geben Sie "enum class" Vorrang vor "enum" (Enum.3).
 C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\Component.h(16): warning C26495: Die Variable "Component::controllerStage" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).
-C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.h(131): warning C26495: Die Variable "LSFM_Camera::hCamArr" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).
+C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\LSFM_Camera.h(131): warning C26495: Die Variable "LSFM_Camera::tapSelect" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).
 C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\TreiberImplementierung.cpp(232): warning C6273: Eine Nichtganzzahl wurde als _Param_(3) übergeben. Im Aufruf von "sprintf_s" ist jedoch eine Ganzzahl erforderlich. Tatsächlicher Typ: "double". Wenn ein Zeigerwert übergeben wird, sollte %p verwendet werden.

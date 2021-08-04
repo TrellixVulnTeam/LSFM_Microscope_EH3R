@@ -15,4 +15,6 @@ public:
 	virtual void SetOperatingMode(int OperatingMode) = 0;
 	virtual int  GetModulation() = 0;
 	virtual int GetActualModulation() = 0;
+	virtual int ReadSpecPower() = 0; // Read the Specification Power; 
+
 };

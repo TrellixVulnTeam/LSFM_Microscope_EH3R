@@ -25,23 +25,6 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Die Variable "LSFM_Camera::hCamArr" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
-    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
-    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
-    <FUNCLINE>131</FUNCLINE>
-    <ADDITIONALINFO>
-      <targetSymbol>LSFM_Camera::hCamArr</targetSymbol>
-    </ADDITIONALINFO>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
-      <FILENAME>LSFM_Camera.h</FILENAME>
-      <LINE>131</LINE>
-      <COLUMN>0</COLUMN>
-    </SFA>
-    <DEFECTCODE>26495</DEFECTCODE>
     <DESCRIPTION>Die Variable "LSFM_Camera::tapSelect" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
     <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
     <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
@@ -110,23 +93,6 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Die Variable "LSFM_Camera::iRet" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
-    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
-    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
-    <FUNCLINE>131</FUNCLINE>
-    <ADDITIONALINFO>
-      <targetSymbol>LSFM_Camera::iRet</targetSymbol>
-    </ADDITIONALINFO>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
-      <FILENAME>LSFM_Camera.h</FILENAME>
-      <LINE>131</LINE>
-      <COLUMN>0</COLUMN>
-    </SFA>
-    <DEFECTCODE>26495</DEFECTCODE>
     <DESCRIPTION>Die Variable "LSFM_Camera::ModFrequency" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
     <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
     <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
@@ -150,6 +116,23 @@
     <FUNCLINE>131</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>LSFM_Camera::waveform</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::dwDelay" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::dwDelay</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -195,12 +178,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Die Variable "LSFM_Camera::dwDelay" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <DESCRIPTION>Die Variable "LSFM_Camera::iRet" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
     <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
     <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
     <FUNCLINE>131</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>LSFM_Camera::dwDelay</targetSymbol>
+      <targetSymbol>LSFM_Camera::iRet</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -246,12 +229,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Die Variable "LSFM_Camera::cameraWarning" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <DESCRIPTION>Die Variable "LSFM_Camera::cameraError" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
     <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
     <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
     <FUNCLINE>131</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>LSFM_Camera::cameraWarning</targetSymbol>
+      <targetSymbol>LSFM_Camera::cameraError</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -263,12 +246,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Die Variable "LSFM_Camera::cameraError" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <DESCRIPTION>Die Variable "LSFM_Camera::cameraWarning" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
     <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
     <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
     <FUNCLINE>131</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>LSFM_Camera::cameraError</targetSymbol>
+      <targetSymbol>LSFM_Camera::cameraWarning</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>
@@ -303,6 +286,23 @@
     <FUNCLINE>131</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>LSFM_Camera::maxImgCountArr</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\LSFM_Software\LSFM_LIbrary_Test\TreiberImplementierung (2)\TreiberImplementierung\TreiberImplementierung\</FILEPATH>
+      <FILENAME>LSFM_Camera.h</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "LSFM_Camera::hCamArr" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
+    <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>LSFM_Camera::hCamArr</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT>

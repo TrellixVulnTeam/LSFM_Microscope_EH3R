@@ -286,12 +286,11 @@ void Image_Sequence(const char* path, double zUp, double zDown, double xValue, d
 }
 
 
-
-void LaserOn(int wavelength)
+void LaserOn(int wavelength, int specPower)
 {
 	for (int i = 0; i < lasers.size(); i++)
 	{
-		if (lasers.at(i)->ReadWaveLength() == wavelength)
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			cout << lasers.at(i)->ReadWaveLength() << endl;
 			lasers.at(i)->LaserOn();
@@ -487,6 +486,7 @@ int main()
 	
 	Connect();
 
+	LaserOn(1, 25);
 	/*
 	//SetExposureTime(1, 1000, 2);
 	char filenemame[100];

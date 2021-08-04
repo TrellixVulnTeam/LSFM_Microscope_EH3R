@@ -6,7 +6,7 @@
   This header file is marked as obsolete. Please use PCO_GetErrorTextSDK instead
   If you still need access to the texts please use PCO_errtext.h.
   PCO_errt.h will be removed in future SDK releases.
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFMLibrary.cpp(241,47): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFMLibrary.cpp(217,47): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
   LSFM_Camera.cpp
   This header file is marked as obsolete. Please use PCO_GetErrorTextSDK instead
   If you still need access to the texts please use PCO_errtext.h.
@@ -22,7 +22,7 @@ C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Camera.cpp(544,23): war
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Camera.cpp(807,28): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Camera.cpp(990,59): warning C4244: "Argument": Konvertierung von "DWORD" in "WORD", möglicher Datenverlust
   LSFM_Laser.cpp
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(488,18): warning C4244: "Initialisierung": Konvertierung von "float" in "int", möglicher Datenverlust
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(543,18): warning C4244: "Initialisierung": Konvertierung von "float" in "int", möglicher Datenverlust
   LSFM_Motion_PI.cpp
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Motion_PI.cpp(9,8): warning C4101: "bFlag": Unreferenzierte lokale Variable
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Motion_PI.cpp(75,8): warning C4101: "bFlag": Unreferenzierte lokale Variable
@@ -33,14 +33,14 @@ C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\XagylFilter.cpp(176,13): war
   Code wird generiert...
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\XagylFilter.cpp(181): warning C4715: "LSFM_Filter::GetElementFromConfigFIle": Nicht alle Codepfade geben einen Wert zurück.
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(76): warning C4715: "LSFM_Laser::hex_char_to_bin": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(101): warning C4715: "LSFM_Laser::hex_str_to_bin_str": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(514): warning C4715: "LSFM_Laser::ReadWaveLength": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(569): warning C4715: "LSFM_Laser::ReadMaxPower": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(619): warning C4715: "LSFM_Laser::GetPowerInpercentage": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(107): warning C4715: "LSFM_Laser::hex_str_to_bin_str": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(569): warning C4715: "LSFM_Laser::ReadWaveLength": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(629): warning C4715: "LSFM_Laser::ReadMaxPower": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Laser.cpp(681): warning C4715: "LSFM_Laser::GetPowerInpercentage": Nicht alle Codepfade geben einen Wert zurück.
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Camera.cpp(83): warning C4715: "LSFM_Camera::SetRecordingstate": Nicht alle Codepfade geben einen Wert zurück.
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Camera.cpp(642): warning C4715: "LSFM_Camera::SingleImageAquisition": Nicht alle Codepfade geben einen Wert zurück.
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFM_Camera.cpp(866): warning C4715: "LSFM_Camera::Live_View": Nicht alle Codepfade geben einen Wert zurück.
-C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFMLibrary.cpp(351): warning C4715: "SingleImageAquisition": Nicht alle Codepfade geben einen Wert zurück.
+C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\LSFMLibrary.cpp(329): warning C4715: "SingleImageAquisition": Nicht alle Codepfade geben einen Wert zurück.
 C:\LSFM_Software\TreiberImplementierung\LSFMLibrary\GlobalFunctions.cpp(192): warning C4715: "LaserPortDetection": Nicht alle Codepfade geben einen Wert zurück.
      Bibliothek "C:\LSFM_Software\TreiberImplementierung\bin64\LSFMLibrary.lib" und Objekt "C:\LSFM_Software\TreiberImplementierung\bin64\LSFMLibrary.exp" werden erstellt.
   LSFMLibrary.vcxproj -> C:\LSFM_Software\TreiberImplementierung\bin64\LSFMLibrary.dll

@@ -151,7 +151,6 @@ vector<LSFM_Laser> LaserPortDetection(const char* filePath)
 	ifstream input;
 	string delimiter = "->";
 	size_t pos = 0;
-	//const char* laserConfigFile = "C:\\Users\\User\\Documents\\TreiberImplementierung (2)\\TreiberImplementierung\\TreiberImplementierung\\LaserConfigFile.txt";
 	input.open(filePath);
 	if (input.is_open())
 	{

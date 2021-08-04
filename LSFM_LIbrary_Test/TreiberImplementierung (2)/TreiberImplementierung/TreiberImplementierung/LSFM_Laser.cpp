@@ -183,14 +183,22 @@
 
 
 
-	float LSFM_Laser::extractValueFromResponse(char* response, string delimiter)
+	float LSFM_Laser::extractValueFromResponse(char* response,  string delimiter)
 	{
 		string response1(response);
 		vector<string> parseString1 = Stringdelimiter(response1, delimiter);
 
+		if (this->specPower == 0)
+		{
+			vector<string> parseString2 = Stringdelimiter(parseString1.at(1), "\r");
+			this->specPower = stoi(parseString2.at(0));
+
+		}
+
 		string str3 = parseString1.at(0).erase(0, 4);
 
 		float value = stof(str3);
+
 
 		return value;
 	}
@@ -211,9 +219,6 @@
 	}
 
 	
-
-
-
 
 	LSFM_Laser::LSFM_Laser(string serialPortInput)
 	{
@@ -285,14 +290,11 @@
 				//	this->ReadStatus();
 					this->GetOperatingMode();
 					this->SetOperatingMode(0x0000);
-			       // this->SetOperatingMode(0x0000);
 				    this->SetModulation(1);
 					this->SetAnalogImpedanz(1);
 					this->Power_On();
-					this->LaserOn();
 					cout << this->ReadWaveLength() << endl;
-				//	cout << this->GetPowerInpercentage() << endl;
-					this->LaserOff();
+					this->GetPowerInpercentage();
 					
 					printf("\n Connection with the Controller succesfull\n\n");
 				}
@@ -473,6 +475,11 @@
 
 	}
 
+	int  LSFM_Laser::ReadSpecPower()
+	{
+		return this->specPower;
+	}
+
 	int LSFM_Laser::ReadWaveLength()
 	{
 		if (this->laserConnected == true)
@@ -495,22 +502,20 @@
 			switch (waveLength)
 			{
 			case 638:
-				value = 1;
+				value = 2;
 				break;
 			case 488:
-				value = 2;
+				value = 1;
 				break;
 			case 445:
 				value = 3;
 				break;
 			default:
 				break;
-
 			}
-
 			return value;
 		}
-
+			
 		else
 			cout << "No LSFM_Laser connected" << endl;
 
@@ -678,6 +683,7 @@
 			s1.erase(0, pos + delimiter.length());
 		}
 
+		list1.push_back(s1);
 		return list1;
 
 	}

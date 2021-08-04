@@ -53,7 +53,7 @@ void LSFM_Laser::SendCommand(char* SerialBuffer)
 
 const  char* LSFM_Laser::hex_char_to_bin(char c)
 {
-	// TODO handle default / error
+	// convert a hexadecimal character into a binary in string form 
 	switch (toupper(c))
 	{
 	case '0': return "0000";
@@ -77,6 +77,13 @@ const  char* LSFM_Laser::hex_char_to_bin(char c)
 
 string LSFM_Laser::hex_str_to_bin_str(char* responseCommand)
 {
+
+	/*
+	* Method to convert a Hexadecimal Value into a binary value
+	* input-> array of character 
+	* output -> binary value in string form 
+	*/
+
 	string response(responseCommand);
 
 	if (!response.empty())
@@ -89,7 +96,6 @@ string LSFM_Laser::hex_str_to_bin_str(char* responseCommand)
 			hexValue[j] = responseCommand[i];
 			j++;
 		}
-		// TODO use a loop from <algorithm> or smth
 		string bin;
 
 		for (unsigned i = 0; i != 4; ++i)
@@ -102,20 +108,24 @@ string LSFM_Laser::hex_str_to_bin_str(char* responseCommand)
 
 void LSFM_Laser::ErrorHandling()
 {
+	/*
+	 Method for managing and handling errors. 
+	
+	*/
 	if (this->laserConnected == true)
 	{
 		stringstream sstream;
 
-		sstream << "?GFB" << "\r";
+		sstream << "?GFB" << "\r"; // Ask for the actual error status of the device
 
 		string command = sstream.str();
 		char SerialBuffer[400];  //Buffer to send and receive data
 
 		strcpy_s(SerialBuffer, command.c_str());
 
-		this->SendCommand(SerialBuffer);
+		this->SendCommand(SerialBuffer); // Send command 
 
-		sstream << "?GLF" << "\r";
+		sstream << "?GLF" << "\r"; // Ask for the last error byte
 
 		command = sstream.str();
 
@@ -123,7 +133,7 @@ void LSFM_Laser::ErrorHandling()
 
 		this->SendCommand(SerialBuffer);
 
-		string binaryValue = hex_str_to_bin_str(SerialBuffer);
+		string binaryValue = hex_str_to_bin_str(SerialBuffer); // convert hex to binary 
 
 		for (int i = 0; i < 16; i++)
 		{
@@ -182,16 +192,34 @@ void LSFM_Laser::ErrorHandling()
 
 }
 
-
-
 float LSFM_Laser::extractValueFromResponse(char* response, string delimiter)
 {
-	string response1(response);
-	vector<string> parseString1 = Stringdelimiter(response1, delimiter);
+	/*
+	Method to extract value from the response of the Device
+	response -> Response of the Device 
+	delimiter -> Delimiter of the extracted value 
+
+	return -> extracted value 
+	
+	*/
+
+	string response1(response); // convert the array of character into a string 
+	 
+	vector<string> parseString1 = Stringdelimiter(response1, delimiter); // split the response with the delimiter to extract the Wavelength value 
+
+	cout << parseString1.at(0) << endl;
+
+	if (this->specPower == 0)
+	{
+		vector<string> parseString2 = Stringdelimiter(parseString1.at(1), "\r"); // split the bext response to extract the value of the Power specification 
+		this->specPower = stoi(parseString2.at(0)); // convert and pass the string value to the variable
+
+	}
 
 	string str3 = parseString1.at(0).erase(0, 4);
 
-	float value = stof(str3);
+	float value = stof(str3); // convert the string value into float value 
+
 
 	return value;
 }
@@ -199,38 +227,41 @@ float LSFM_Laser::extractValueFromResponse(char* response, string delimiter)
 void LSFM_Laser::Power_On()
 {
 
-	stringstream sstream;
+	stringstream sstream; // variable to write hexadecimal value 
 
-	sstream << "?POn" << "\r";
+	sstream << "?POn" << "\r"; // Power on Command 
 
 	string command = sstream.str();
 	char SerialBuffer[400];  //Buffer to send and receive data
 
-	strcpy_s(SerialBuffer, command.c_str());
+	strcpy_s(SerialBuffer, command.c_str()); // copy command to the serial Buffer 
 
-	this->SendCommand(SerialBuffer);
+	this->SendCommand(SerialBuffer); // Send command to the Device 
 }
-
-
-
-
-
 
 LSFM_Laser::LSFM_Laser(string serialPortInput)
 {
+	/*
+	* Constructor of the Class 
+	* parameter: serialPortInput -> COM port of the Laser 
+	*/
 	serialPort = new (char[100]);
 	strcpy(serialPort, serialPortInput.c_str());
 }
 
-
 void LSFM_Laser::Connect()
 {
-	// Open serial port
 
+	/*
+	Method of connecting a serial port connected laser with a computer:
+	 Important parameter of the connection: CoMPort,BaudRate, ByteSize, StopBits, Parity
+	
+	*/
+
+	// Open serial port and retrieve handler to communicate with the device 
 	this->serialHandle = CreateFile(serialPort, GENERIC_READ | GENERIC_WRITE, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
 
 
-	cout << serialPort << endl;
 	if (this->serialHandle == INVALID_HANDLE_VALUE)
 	{
 		printf("\n Connection with the Controller failed\n\n");
@@ -244,6 +275,7 @@ void LSFM_Laser::Connect()
 		DCB serialParams = { 0 };
 		serialParams.DCBlength = sizeof(serialParams);
 
+		// Check if the Communication with the Device was etablished 
 		this->Status = GetCommState(this->serialHandle, &serialParams);
 
 		if (this->Status == FALSE)
@@ -255,6 +287,7 @@ void LSFM_Laser::Connect()
 
 		else
 		{
+            // Set Baudrate, ByteSize, StopBits and Parity 
 			serialParams.BaudRate = 500000;
 			serialParams.ByteSize = 8;
 			serialParams.StopBits = ONESTOPBIT;
@@ -283,17 +316,30 @@ void LSFM_Laser::Connect()
 
 
 				this->laserConnected = true;
+
+				// Read status to check if
 				this->ReadStatus();
+
+				// Get the actual operating mode of the Device 
 				this->GetOperatingMode();
+
+				// Set default operating Mode 
 				this->SetOperatingMode(0x0000);
+
+				// Set default Modulation 
 				this->SetModulation(1);
+
+				//Set Analog Impedanz
 				this->SetAnalogImpedanz(1);
+
+				//laser Power ON
 				this->Power_On();
 
-				printf("\n Connection with the Controller succesfull\n\n");
+				// Get Wavelength and Spec. Power 
+				this->ReadWaveLength();
+
+				printf("\n Connection with the Laser  succesfull\n\n");
 			}
-
-
 
 		}
 
@@ -307,13 +353,11 @@ void LSFM_Laser::Connect()
 
 void LSFM_Laser::SetAnalogImpedanz(int impedanz)
 {
-	/*   method to change the signal mdulation.
+	/*   method to Set the Impedance of the Analog Input.
 
 	valid value for the paramter modulation are:
-		 0: emission standby (the diode current source is set to 0)
-		 1: ACC mode – no modulation active
-		 2: APC mode – no modulation active
-		 3: ACC mode – analog modulated
+		 0: impedance OFF
+		 1:impedance ON
 	*/
 
 	if (this->laserConnected == true)
@@ -322,7 +366,7 @@ void LSFM_Laser::SetAnalogImpedanz(int impedanz)
 		{
 			stringstream sstream;
 
-			sstream << "?SIA" << impedanz << "\r";
+			sstream << "?SIA" << impedanz << "\r"; // Set Impedance of the Analog Input
 
 			string command = sstream.str();
 
@@ -347,6 +391,10 @@ void LSFM_Laser::Disconnect()
 	if (this->laserConnected == true)
 	{
 		CloseHandle(this->serialHandle);
+		this->laserConnected = false;
+		this->specPower = 0;
+
+		this->serialHandle = NULL;
 		printf("\nConnection successfull closed\n\n");
 	}
 	else
@@ -373,18 +421,22 @@ void LSFM_Laser::remove(Component* component)
 
 void LSFM_Laser::LaserOn()
 {
+	/*  Method to turn On the Laser*/
+
 	if (this->laserConnected == true)
 	{
 		stringstream sstream;
 
-		sstream << "?LOn" << "\r";
+		sstream << "?LOn" << "\r";   // Command to turn ON the laser 
 
 		string command = sstream.str();
 		char SerialBuffer[400];  //Buffer to send and receive data
 
 		strcpy_s(SerialBuffer, command.c_str());
-
+		cout << "Test1" << endl;
 		this->SendCommand(SerialBuffer);
+		cout << "Test2" << endl;
+
 	}
 
 	else
@@ -394,11 +446,13 @@ void LSFM_Laser::LaserOn()
 
 void LSFM_Laser::LaserOff()
 {
+	/*  Method to turn OFF the Laser*/
+
 	if (this->laserConnected == true)
 	{
 		stringstream sstream;
 
-		sstream << "?LOf" << "\r";
+		sstream << "?LOf" << "\r"; // command to turn OFF the Laser 
 
 		string command = sstream.str();
 		char SerialBuffer[400];  //Buffer to send and receive data
@@ -417,6 +471,7 @@ void LSFM_Laser::LaserOff()
 
 int LSFM_Laser::GetActualModulation()
 {
+	// Method to retrieve the actual Modualtion of the Laser
 	return this->actualModulation;
 }
 
@@ -439,7 +494,7 @@ void LSFM_Laser::SetModulation(int modulation)
 		{
 			stringstream sstream;
 
-			sstream << "?ROM" << modulation << "\r";
+			sstream << "?ROM" << modulation << "\r";  // command to ret
 
 			string command = sstream.str();
 
@@ -487,24 +542,24 @@ int LSFM_Laser::ReadWaveLength()
 
 		int waveLength = extractValueFromResponse(SerialBuffer, "§");
 
+		cout << "wavelength = " << waveLength << endl;
+
 		int value = 0;
 
 		switch (waveLength)
 		{
 		case 638:
-			value = 1;
+			value = 2;
 			break;
 		case 488:
-			value = 2;
+			value = 1;
 			break;
 		case 445:
 			value = 3;
 			break;
 		default:
 			break;
-
 		}
-
 		return value;
 	}
 
@@ -513,6 +568,11 @@ int LSFM_Laser::ReadWaveLength()
 
 }
 
+
+int LSFM_Laser::ReadSpecPower()
+{
+	return this->specPower;
+}
 
 void LSFM_Laser::ReadStatus()
 {
@@ -596,6 +656,7 @@ float LSFM_Laser::GetPowerInpercentage()
 {
 	if (this->laserConnected == true)
 	{
+
 		stringstream sstream;
 
 		sstream << "?GPP" << "\r";
@@ -604,6 +665,7 @@ float LSFM_Laser::GetPowerInpercentage()
 		char SerialBuffer[400];  //Buffer to send and receive data
 
 		strcpy_s(SerialBuffer, command.c_str());
+		
 
 		this->SendCommand(SerialBuffer);
 
@@ -675,6 +737,7 @@ vector<string> LSFM_Laser::Stringdelimiter(string s1, string delimiter) {
 		s1.erase(0, pos + delimiter.length());
 	}
 
+	list1.push_back(s1);
 	return list1;
 
 }

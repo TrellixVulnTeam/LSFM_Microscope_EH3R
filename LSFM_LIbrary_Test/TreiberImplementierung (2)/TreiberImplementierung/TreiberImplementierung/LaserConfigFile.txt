@@ -1,3 +1,4 @@
 Laser1->COM11
 Laser2->COM12
 Laser3->COM15
+Laser4->COM14

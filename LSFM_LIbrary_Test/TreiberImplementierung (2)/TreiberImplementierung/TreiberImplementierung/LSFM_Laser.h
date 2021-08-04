@@ -18,6 +18,7 @@ private:
 	bool laserStatus = false;
 	char* serialPort;
 	int actualModulation = 0;
+	int specPower = 0;
 	int modulation = 0; // variable to retireve the modulation of the laser 
 	bool laserConnected = false;//variable to check if the laser is connected 
 	BOOL   Status; // Status
@@ -85,6 +86,9 @@ public:
 	void SetOperatingMode(int OperatingMode) override;
 
 	void SetAnalogImpedanz(int impedanz);
+
+	int ReadSpecPower() override; // Read the Specification Power; 
+
 
 };
 

@@ -37,10 +37,7 @@ Controllers = {"X Controller": 0,
                "Z Controller": 2,
                "Focus Controller": 3}
 
-waveLengthList = { 638: 1,
-               488:2,
-               455:3
-}
+
 
 filterPositions = {}
 class DataPack(Structure):
@@ -50,7 +47,9 @@ class DataPack(Structure):
                 ("bufferAddress", POINTER(c_uint16))]
 
 
-
+class LaserPack(Structure):
+    _fields_ = [("wavelength", c_int),
+                ("specPower", c_int)]
 
 
 def Connect():
@@ -83,20 +82,19 @@ def Disconnect():
         print("Error with the Disconnect method")
 
 
-def SetPower(wavelength, power):
-    wavelength = waveLengthList[wavelength]
-    mydll.SetPower(c_int(wavelength), c_float(power))
+def SetPower(wavelength,specPower, power):
+    mydll.SetPower(c_int(wavelength), c_int(specPower), c_float(power))
 
 
-def GetActualPulseModulation(wavelength):
+def GetActualPulseModulation(wavelength , specPower):
     mydll.GetActualModulation.restype = c_int
-    pulse_modulation = mydll.GetActualModulation(c_int(wavelength))
+    pulse_modulation = mydll.GetActualModulation(c_int(wavelength),c_int(specPower))
     return Pulse_Modulation[pulse_modulation]
 
 
-def GetModulation(wavelength):
+def GetModulation(wavelength, specPower):
     mydll.GetModulation.restype = c_int
-    modulation = mydll.GetModulation(c_int(wavelength))
+    modulation = mydll.GetModulation(c_int(wavelength),c_int(specPower))
     return Operating_Mode[modulation]
 
 
@@ -120,27 +118,24 @@ def MoveRelativ(stage, position):
     mydll.MoveRelativ(stage, position ,False)
 
 
-def GetLaserPower(wavelength):
+def GetLaserPower(wavelength, specPower):
     mydll.GetPowerInPercentage.restype = c_double
-    power = mydll.GetPowerInPercentage(c_int(wavelength))
+    power = mydll.GetPowerInPercentage(c_int(wavelength),c_int(specPower))
     return power
 
 
-def LaserOn(wavelength):
-    mydll.LaserOn(c_int(wavelength))
+def LaserOn(wavelength, specPower):
+    mydll.LaserOn(c_int(wavelength), c_int(specPower))
+    return True
+
+def SetModulation(wavelength, specPower,  modulation):
+    mydll.SetModulation(c_int(wavelength),c_int(specPower), c_int(modulation))
     return True
 
 
-
-def SetModulation(wavelength, modulation):
-    mydll.SetModulation(c_int(wavelength),c_int(modulation))
+def LaserOff(wavelength, specPower):
+    mydll.LaserOff(c_int(wavelength),c_int(specPower))
     return True
-
-
-def LaserOff(wavelength):
-    mydll.LaserOff(c_int(wavelength))
-    return True
-
 
 def StartSequenceAquisition(cameraType, path, zUp, zDown, xValue, yValue, focusUp, focusDown, N, dZ , exposureParameter, ActualLaserParameter,
                             filterparameter, phaseNumber):
@@ -167,10 +162,11 @@ def StartSequenceAquisition(cameraType, path, zUp, zDown, xValue, yValue, focusU
     f.write("Y Value =  %f  \r\n" % (yValue))
     f.write("dZ Value =  %f  micrometer \r\n" % (dZ*1000))
     f.write("Image Number =  %d  \r\n" % (N))
-    f.write("ExposureTime =  %d  ms \r\n" % (exposureParameter["ExposureTime"]))
-    f.write("DelayTime =  %d ms \r\n" % (exposureParameter["DelayTime"]))
-    f.write("LaserTyp =  %s  \r\n" % (ActualLaserParameter["LaserTyp"]))
-    f.write("LaserPower =  %d  \r\n" % (ActualLaserParameter["LaserPower"]))
+    f.write("Exposure Time =  %d  ms \r\n" % (exposureParameter["ExposureTime"]))
+    f.write("Delay Time =  %d ms \r\n" % (exposureParameter["DelayTime"]))
+    f.write("Laser Typ =  %s  \r\n" % (ActualLaserParameter["LaserTyp"]))
+    f.write("Laser Power =  %d %% \r\n" % (ActualLaserParameter["LaserPower"]))
+    f.write("Laser Intensity Power =  %d  mw\r\n" % (ActualLaserParameter["LaserSpecPower"]))
     f.write("FilterWheel =  %s  \r\n" % (filterparameter))
 
 
@@ -187,7 +183,6 @@ def StartSequenceAquisition(cameraType, path, zUp, zDown, xValue, yValue, focusU
 
     return path
 
-
 def SingleImageAquisition(camera, filePath):
 
     filePathsplit = filePath.split('\\')
@@ -203,7 +198,6 @@ def SingleImageAquisition(camera, filePath):
     response =  mydll.SingleImageAquisition(c_int(camera), c_char_p(b_string1))
 
     return
-
 
 def SetFlimParamter(cameraType, phaseNumber, frequency):
     mydll.SetFlimParamter(c_int(cameraType),   c_int(phaseNumber), c_int(frequency))
@@ -242,7 +236,7 @@ def GetListofNotConnectedHardware():
     for i in range(len(list) -1):
             finalList.append(list[i])
 
-    print(finalList)
+
 
     return finalList
 
@@ -281,9 +275,27 @@ def GetStagesPosition():
     return listOfPositions
 
 
+def GetWaveLengthAndSpecPower():
+    laserpack = (LaserPack*4)()
+    newLaserpack = []
+
+    mydll.GetWaveLengthAndSpecPower(laserpack)
+
+
+    for i in range(len(laserpack)):
+        if (laserpack[i].wavelength != 0):
+            newLaserpack.append(laserpack[i])
+
+    return newLaserpack
+
+
+
+
+
+
+
 def SetExposure( camera , exposureTime , delay):
         mydll.SetExposureTime(c_int(camera),c_int(exposureTime), c_int(delay))
-
 
 
 def GetExposureTime(camera):
@@ -335,3 +347,4 @@ def Live_View(camera):
         """
 
     return img
+

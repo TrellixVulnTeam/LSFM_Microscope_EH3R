@@ -87,12 +87,12 @@
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26495</DEFECTCODE>
-    <DESCRIPTION>Die Variable "LSFM_Camera::hCamArr" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <DESCRIPTION>Die Variable "LSFM_Camera::tapSelect" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
     <FUNCTION>LSFM_Camera::{ctor}</FUNCTION>
     <DECORATED>??0LSFM_Camera@@QEAA@XZ</DECORATED>
     <FUNCLINE>131</FUNCLINE>
     <ADDITIONALINFO>
-      <targetSymbol>LSFM_Camera::hCamArr</targetSymbol>
+      <targetSymbol>LSFM_Camera::tapSelect</targetSymbol>
     </ADDITIONALINFO>
     <PATH></PATH>
   </DEFECT><DEFECT>

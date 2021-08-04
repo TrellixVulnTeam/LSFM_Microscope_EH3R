@@ -36,9 +36,9 @@ currentLaser = 1
 progressBarValue = 0
 counter = 0
 jumper = 0
-laser1ON = False
-laser2ON = False
-laser3ON = False
+laserON = False
+
+laserPackList = None
 laser1Value = 0
 controllerValues = ["X Controller", "Y Controller", "Z Controller", "Focus Controller"]
 oldControllersValues = {"X Controller": 0, "Y Controller": 0, "Z Controller": 0, "Focus Controller": 0}
@@ -53,7 +53,8 @@ exposureParameter = {"ExposureTime": 0,
                      "DelayTime": 0}
 
 ActualLaserParameter = {"LaserTyp": '',
-                        "LaserPower": 0}
+                        "LaserPower": 0,
+                        "LaserSpecPower": 0}
 delayTime = 0
 positionValue = 0.0
 liveModus = False
@@ -64,7 +65,7 @@ WINDOWS_SIZE = 0
 rotationScalar = 0
 LASER = {'blue': 1,
          'red': 2,
-         'purple':3 }
+         'purple':3}
 
 laser1OperatingMode = 0
 laser1ActualmodulationMode = 0
@@ -138,9 +139,9 @@ filterParameter = None
 isAcquisitionRunning = False
 cameraType = 1
 phaseNumber = 1
-
+specPower = 0
 def connect_hardware():
-    global listOfCameras, actPosition, exposureParameter, listofPositions,notConnectedHardware,filterParameter,cameraType
+    global listOfCameras, actPosition, exposureParameter, listofPositions,notConnectedHardware,filterParameter,cameraType,laserPackList
 
     Controller.Connect()
     listOfCameras, arrayValue = Controller.GetConnectedCamera()
@@ -150,9 +151,11 @@ def connect_hardware():
     actPosition = Controller.GetStagesPosition()
     listofPositions = Controller.GetAllPositionsName()
     actFilterPosition = Controller.GetActualFilterPosition()
+
     filterParameter = listofPositions[actFilterPosition]
     notConnectedHardware = Controller.GetListofNotConnectedHardware()
 
+    laserPackList = Controller.GetWaveLengthAndSpecPower()
     return
 
 
@@ -279,10 +282,6 @@ class Thread(QThread):
                 liveModus = False
                 break
 
-
-
-
-
     def stop(self):
         self.threadactive = False
         self.is_killed = True
@@ -294,99 +293,53 @@ class SpinnerThread(QRunnable):
         self.w = dialog
 
     def LaserPowerConfiguration(self, status):
-        global ActualLaserParameter,laser1ON,laser2ON,w,laser3ON
+        global ActualLaserParameter,laserON,w, currentLaser, laserPackList
+
+        index = currentLaser -1
+
+        wavelength = self.RetrieveKeyByValue(ActualLaserParameter, "LaserTyp")
+
         if(status):
-            if (ActualLaserParameter["LaserTyp"] == 'blue'):
                 while (True):
                     try:
-                        Controller.LaserOn(LASER['blue'])
-                        w.laserPowerButton.setChecked(True)
-                        Controller.SetPower(488, ActualLaserParameter["LaserPower"])
-                        w.setValueToProgressbar(ActualLaserParameter["LaserPower"])
-                        w.laserSlider.setValue(ActualLaserParameter["LaserPower"])
-                        w.laserSlider.setEnabled(True)
-                        laser1ON = True
+                        for i in range(len(laserPackList)):
+                            if(wavelength == laserPackList[i].wavelength):
+                                Controller.LaserOn(laserPackList[i].wavelength,laserPackList[i].specPower )
+                                w.laserPowerButton.setChecked(True)
+                                Controller.SetPower(laserPackList[i].wavelength, laserPackList[i].specPower, ActualLaserParameter["LaserPower"])
+                                w.setValueToProgressbar(ActualLaserParameter["LaserPower"])
+                                w.laserSlider.setValue(ActualLaserParameter["LaserPower"])
+                                w.laserSlider.setEnabled(True)
+                                laserON = True
 
-                        break
+                                break
+
                     except Exception:
                         pass
 
-            elif (ActualLaserParameter["LaserTyp"] == 'red'):
-                while (True):
-                    try:
-                        Controller.LaserOn(LASER['red'])
-                        w.laserPowerButton.setChecked(True)
-                        Controller.SetPower(638, ActualLaserParameter["LaserPower"])
-                        w.setValueToProgressbar(ActualLaserParameter["LaserPower"])
-                        w.laserSlider.setValue(ActualLaserParameter["LaserPower"])
-                        w.laserSlider.setEnabled(True)
-                        laser2ON = True
-                        break
-                    except Exception:
-                        pass
-            else:
-                while (True):
-                    try:
-                        Controller.LaserOn(LASER['purple'])
-                        w.laserPowerButton.setChecked(True)
-                        Controller.SetPower(455, ActualLaserParameter["LaserPower"])
-                        w.setValueToProgressbar(ActualLaserParameter["LaserPower"])
-                        w.laserSlider.setValue(ActualLaserParameter["LaserPower"])
-                        w.laserSlider.setEnabled(True)
-                        laser3ON = True
-                        break
-                    except Exception:
-                        pass
-                
         else:
-            if (ActualLaserParameter["LaserTyp"] == 'blue'):
                 while (True):
                     try:
-                        Controller.LaserOff(LASER['blue'])
-                        w.setValueToProgressbar(0)
-                        w.laserSlider.setValue(0)
-                        w.laserSlider.setEnabled(False)
-                        w.laserPowerButton.setChecked(False)
-                        laser1ON = False
-                        break
+                        for i in range(len(laserPackList)):
+                            if (wavelength == laserPackList[i].wavelength):
+                                Controller.LaserOff(laserPackList[i].wavelength,laserPackList[i].specPower )
+                                w.setValueToProgressbar(0)
+                                w.laserSlider.setValue(0)
+                                w.laserSlider.setEnabled(False)
+                                w.laserPowerButton.setChecked(False)
+                                laserON = False
+                                break
+
                     except Exception:
                         pass
-
-            elif(ActualLaserParameter["LaserTyp"] == 'red'):
-                while (True):
-                    try:
-                        Controller.LaserOff(LASER['red'])
-                        w.setValueToProgressbar2(0)
-                        w.laserSlider.setValue(0)
-                        w.laserSlider.setEnabled(False)
-                        w.laserPowerButton.setChecked(False)
-                        laser2ON = False
-                        break
-                    except Exception:
-                        pass
-
-            else:
-                while (True):
-                    try:
-                        Controller.LaserOff(LASER['purple'])
-                        w.setValueToProgressbar2(0)
-                        w.laserSlider.setValue(0)
-                        w.laserSlider.setEnabled(False)
-                        w.laserPowerButton.setChecked(False)
-                        laser3ON = False
-                        break
-                    except Exception:
-                        pass
-
-
 
         return
 
 
     def run(self):
         global xValue, yValue, dz_value, image_count, camera, listOfCameras, focusUp_value, focusDown_value, zUp_value, zDown_value, acquisitionPath, exposureParameter, \
-            ActualLaserParameter, current_action, spinbox_value, lcdNumber, positionTarget, lastLaserActif,LASER,savePicturePath,filterParameter,cameraType,laser1ON,laser2ON,\
-            laser3ON,currentLaser, phaseNumber,w,liveModus
+            ActualLaserParameter, current_action, spinbox_value, lcdNumber, positionTarget, lastLaserActif,LASER,savePicturePath,filterParameter,cameraType,laserON\
+            ,currentLaser, phaseNumber,w,liveModus
 
 
         print(ActualLaserParameter)
@@ -394,14 +347,10 @@ class SpinnerThread(QRunnable):
         if (current_action == 0):
 
 
-            if (currentLaser == 1):
-                laser1ON = False
 
-            elif (currentLaser == 2):
-                laser2ON = False
+            laserON = False
 
-            else:
-                laser3ON = False
+
 
             w.powerValue_initialisation()
             if (liveModus == True):
@@ -419,12 +368,9 @@ class SpinnerThread(QRunnable):
             Controller.MoveAbsolut(listControllersView["Z Controller"], zUp_value, 1)
 
             time.sleep(1)
-            if (currentLaser == 1):
-                laser1ON = True
-            elif (currentLaser == 2):
-                laser2ON = True
-            else:
-                laser3ON = True
+
+            laserON = True
+
 
             w.powerValue_initialisation()
             w.laserPowerButton.setChecked(False)
@@ -439,6 +385,11 @@ class SpinnerThread(QRunnable):
             Controller.MoveAbsolut(listControllersView[combobox2_text], positionTarget,0)
             actPosition = Controller.GetStagesPosition()
             lcdNumber.display(actPosition[combobox2_text])
+
+        elif (current_action == 3):
+            connect_hardware()
+            w.navigateToCameraPage()
+
 
         QMetaObject.invokeMethod(self.w, "setData",
                                  Qt.QueuedConnection,
@@ -565,7 +516,7 @@ class Ui_MainWindow(object):
         self.graphicsView_2.plot(x, y, stepMode=True, fillLevel=0, brush=(0, 0, 255, 150))
 
     def setupUi(self, MainWindow):
-        global histogrammView, imageFrame, lcdNumber,startRecorder
+        global histogrammView, imageFrame, lcdNumber,startRecorder,laserPackList
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1444, 900)
         self.centralwidget = QWidget(MainWindow)
@@ -1211,6 +1162,9 @@ class Ui_MainWindow(object):
         font.setFamily("Roboto Thin")
         font.setPointSize(30)
         self.laser1_percentage.setFont(font)
+
+
+
         self.laser1_percentage.setStyleSheet("color: rgb(115, 185, 255); padding: 0px; background-color: none;")
         self.laser1_percentage.setAlignment(Qt.AlignCenter)
         self.laser1_percentage.setIndent(-1)
@@ -1316,6 +1270,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.main_footer)
         MainWindow.setCentralWidget(self.centralwidget)
 
+        self.CheckAndSetLaserParameter(laserPackList[0].wavelength,laserPackList[0].specPower)
         self.retranslateUi(MainWindow)
         QMetaObject.connectSlotsByName(MainWindow)
 
@@ -1424,20 +1379,23 @@ class Ui_MainWindow(object):
         currentLiveMode = LiveMode[liveModusMethod]
 
     def RestartHardware(self):
-        global laser1ON,laser2ON,laser3ON, liveModus
+        global laserON, liveModus,current_action,actionText,currentLaser,laserPackList
 
-        if laser1ON:
-            Controller.LaserOff(LASER['blue'])
-        if laser2ON:
-            Controller.LaserOff(LASER['red'])
-        if laser3ON:
-            Controller.LaserOff(LASER['purple'])
+        index = currentLaser - 1
+        if laserON:
+            Controller.LaserOff(laserPackList[index].wavelength, laserPackList[index].specPower)
+
         if liveModus:
             liveModus = False
 
         Controller.Disconnect()
-        connect_hardware()
-        self.navigateToCameraPage()
+
+        actionText = "Restart in progress"
+
+        current_action = 3
+        dial = Dialog1()
+        dial.show()
+        dial.exec_()
 
     def ChangeCameraAndSetParameter(self):
         Dialog = QDialog()
@@ -1473,7 +1431,10 @@ class Ui_MainWindow(object):
 
 
     def changeCamera(self):
-        global listOfCameras, cameraType
+        global listOfCameras, cameraType, liveModus
+
+        liveModus = True
+        self.StartLiveView(0)
 
         if(  listOfCameras != None and  len(listOfCameras) > 0 and self.CameraList != None):
             if(self.CameraList.currentText() == "LSFM_Camera"):
@@ -1488,8 +1449,6 @@ class Ui_MainWindow(object):
         else:
             self.frequencyList.setDisabled(False)
             self.phaseList.setDisabled(False)
-
-
 
 
     def navigateToCameraPage(self):
@@ -1518,7 +1477,6 @@ class Ui_MainWindow(object):
 
         self.filtersPositions.setCurrentText(self.listOfFilters[actFilterPosition])
         filterParameter = self.filtersPositions.currentText()
-        print(filterParameter)
         self.exposureValue.setValue(exposureParameter[0])
         self.delayValue.setValue(exposureParameter[1])
         self.stackedWidget.setCurrentWidget(self.camera_page)
@@ -1636,7 +1594,7 @@ class Ui_MainWindow(object):
     def StartSequenceAcquisition(self):
 
         global xValue, yValue, dz_value, image_count, camera, listOfCameras, focusUp_value, focusDown_value, zUp_value, zDown_value, acquisitionPath, \
-            actionText, current_action, laser2ON, laser1ON, fastForward, isAcquisitionRunning
+            actionText, current_action , laserON, fastForward, isAcquisitionRunning
         actionText = "Acquisition is Running"
         current_action = 0
         if self.sequenceAcquisitionPath == None:
@@ -1707,24 +1665,15 @@ class Ui_MainWindow(object):
                         dial.show()
                         dial.exec_()
 
-    def navigateToAnotherlaser(self, count):
-        global currentLaser,laser3ON,laser1ON,laser2ON
+    def CheckAndSetLaserParameter(self, wavelength, specPower):
+        global LASER
 
-        self.setValueToProgressbar(0)
-        self.laserSlider.setValue(0)
-        self.laserSlider.setEnabled(False)
-        self.laserPowerButton.setChecked(False)
 
-        currentLaser += count
+        self.laser1_temp.setText(
+            "<html><head/><body><p>Spec Power: <span style=\" color:#ffffff;\"> " + str(
+                specPower) + " mw</span></p></body></html>")
 
-        if currentLaser > 3:
-            currentLaser = 1
-
-        elif currentLaser < 1:
-            currentLaser = 3
-
-        if(currentLaser == 1):
-            self.laserLabel.setText("Laser 1")
+        if wavelength == LASER['blue']:
             self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
                           "rgba(85, 170, 255, 255)")
             self.laser1_percentage.setStyleSheet("color: rgb(115, 185, 255); padding: 0px; background-color: none;")
@@ -1753,45 +1702,46 @@ class Ui_MainWindow(object):
                                            "    background-color: rgb(199, 0, 99);\n"
                                            "}\n"
                                            "")
+            self.wavelengthInfo.setText(
+                "<html><head/><body><p>WaveLength = 488 mm<br/></p></body></html>")
 
-        if(currentLaser == 2):
-            self.laserLabel.setText("Laser 2")
+        elif wavelength == LASER['red']:
             self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
-                              "rgba(255, 0, 127, 255)")
+                          "rgba(255, 0, 127, 255)")
             self.laser1_percentage.setStyleSheet("color: rgb(255, 44, 174); padding: 0px; background-color: none;")
-            #self.laser1_percentage.setStyleSheet("color: rgb(115, 185, 255); padding: 0px; background-color: none;")
             self.laserSlider.setStyleSheet("/* SLIDERS */\n"
-                                             "QSlider::groove:horizontal {\n"
-                                             "    border-radius: 9px;\n"
-                                             "    height: 18px;\n"
-                                             "    margin: 0px;\n"
-                                             "    background-color: rgb(52, 59, 72);\n"
-                                             "}\n"
-                                             "QSlider::groove:horizontal:hover {\n"
-                                             "    background-color: rgb(55, 62, 76);\n"
-                                             "}\n"
-                                             "QSlider::handle:horizontal {\n"
-                                             "    background-color: rgb(255, 0, 127);\n"
-                                             "    border: none;\n"
-                                             "    height: 18px;\n"
-                                             "    width: 18px;\n"
-                                             "    margin: 0px;\n"
-                                             "    border-radius: 9px;\n"
-                                             "}\n"
-                                             "QSlider::handle:horizontal:hover {\n"
-                                             "    background-color: rgb(255, 55, 155);\n"
-                                             "}\n"
-                                             "QSlider::handle:horizontal:pressed {\n"
-                                             "    background-color: rgb(199, 0, 99);\n"
-                                             "}\n"
-                                             "")
+                                           "QSlider::groove:horizontal {\n"
+                                           "    border-radius: 9px;\n"
+                                           "    height: 18px;\n"
+                                           "    margin: 0px;\n"
+                                           "    background-color: rgb(52, 59, 72);\n"
+                                           "}\n"
+                                           "QSlider::groove:horizontal:hover {\n"
+                                           "    background-color: rgb(55, 62, 76);\n"
+                                           "}\n"
+                                           "QSlider::handle:horizontal {\n"
+                                           "    background-color: rgb(255, 0, 127);\n"
+                                           "    border: none;\n"
+                                           "    height: 18px;\n"
+                                           "    width: 18px;\n"
+                                           "    margin: 0px;\n"
+                                           "    border-radius: 9px;\n"
+                                           "}\n"
+                                           "QSlider::handle:horizontal:hover {\n"
+                                           "    background-color: rgb(255, 55, 155);\n"
+                                           "}\n"
+                                           "QSlider::handle:horizontal:pressed {\n"
+                                           "    background-color: rgb(199, 0, 99);\n"
+                                           "}\n"
+                                           "")
+            self.wavelengthInfo.setText(
+                "<html><head/><body><p>WaveLength = 638 mm<br/></p></body></html>")
 
-        elif(currentLaser == 3):
-            self.laserLabel.setText("Laser 3")
+
+        elif wavelength == LASER['purple']:
             self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
                           "rgba(85, 0, 127, 255)")
             self.laser1_percentage.setStyleSheet("color: rgb(85, 0, 127); padding: 0px; background-color: none;")
-            # self.laser1_percentage.setStyleSheet("color: rgb(115, 185, 255); padding: 0px; background-color: none;")
             self.laserSlider.setStyleSheet("/* SLIDERS */\n"
                                            "QSlider::groove:horizontal {\n"
                                            "    border-radius: 9px;\n"
@@ -1817,6 +1767,32 @@ class Ui_MainWindow(object):
                                            "    background-color: rgb(199, 0, 99);\n"
                                            "}\n"
                                            "")
+            self.wavelengthInfo.setText(
+                "<html><head/><body><p>WaveLength = 445 mm<br/></p></body></html>")
+
+
+    def navigateToAnotherlaser(self, count):
+        global currentLaser,laserON,laserPackList
+
+        self.setValueToProgressbar(0)
+        self.laserSlider.setValue(0)
+        self.laserSlider.setEnabled(False)
+        self.laserPowerButton.setChecked(False)
+
+        connectedLasers = len(laserPackList)
+
+
+        currentLaser += count
+
+        if currentLaser > connectedLasers:
+            currentLaser = 1
+
+        elif currentLaser < 1:
+            currentLaser = connectedLasers
+
+        index = currentLaser -1
+        self.CheckAndSetLaserParameter(laserPackList[index].wavelength, laserPackList[index].specPower)
+
 
     def MoveRelativ(self, eingabe):
         global combobox2_text, listControllersView, actPosition, isZstage
@@ -1856,45 +1832,54 @@ class Ui_MainWindow(object):
 
     def changeLaserModulation(self):
         global currentLaser
+        index = currentLaser -1
         modulation = self.comboBox_6.currentText()
         if (modulation == ""):
             pass
         else:
-          Controller.SetModulation(currentLaser, LaserPulseMOdulation[modulation])
+          Controller.SetModulation(laserPackList[index].wavelength, laserPackList[index].specPower, LaserPulseMOdulation[modulation])
+
+    def RetrieveKeyByValue(self,dict, searchKey):
+
+        """
+         Method to find the key of a object Dictionnary with help of the Value
+        :param dict: dictionnary
+        :param searchKey: value of the object in Dictionnary
+        :return: key of the object in dictionnary
+            """
+
+        for key, value in dict.items():
+             if value == searchKey:
+                return key
+
+
+
+
 
     def ChangeLaserValue(self):
-        global ActualLaserParameter,currentLaser
+        global ActualLaserParameter,currentLaser,laserPackList
 
-        if (currentLaser == 1):
-            laserValue = self.laserSlider.value()
-            Controller.SetPower(488, laserValue)
-            ActualLaserParameter["LaserTyp"] = 'blue'
-            if(laserValue != 0):
-                ActualLaserParameter["LaserPower"] = int(laserValue)
+        index = currentLaser -1
 
+        laserValue = self.laserSlider.value()
+        Controller.SetPower(laserPackList[index].wavelength, laserPackList[index].specPower, laserValue)
+        if (laserValue != 0):
+            ActualLaserParameter["LaserPower"] = int(laserValue)
+
+        ActualLaserParameter["LaserTyp"] = self.RetrieveKeyByValue(LASER,laserPackList[index].wavelength)
+
+        ActualLaserParameter["LaserSpecPower"] = laserPackList[index].specPower
+
+
+        if(laserPackList[index].wavelength == 1):
             self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
-                          "rgba(85, 170, 255, 255)")
-
-
-
-        elif(currentLaser == 2):
-             laserValue = self.laserSlider.value()
-             Controller.SetPower(638, laserValue)
-             ActualLaserParameter["LaserTyp"] = 'red'
-             if (laserValue != 0):
-                 ActualLaserParameter["LaserPower"] = int(laserValue)
-             self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
-                           "rgba(255, 0, 127, 255)")
-
-        else:
-            laserValue = self.laserSlider.value()
-            Controller.SetPower(455, laserValue)
-            ActualLaserParameter["LaserTyp"] = 'purple'
-            if (laserValue != 0):
-                ActualLaserParameter["LaserPower"] = int(laserValue)
+                      "rgba(85, 170, 255, 255)")
+        elif(laserPackList[index].wavelength == 2):
+            self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
+                          "rgba(255, 0, 127, 255)")
+        elif(laserPackList[index].wavelength == 3):
             self.setValue(self.laserSlider, self.laser1_percentage, self.circularProgressCPU,
                           "rgba(85, 0, 127, 255)")
-
 
 
     def checkComboBoxValue(self):
@@ -1929,7 +1914,6 @@ class Ui_MainWindow(object):
 
         except Exception as error:
             print(" error: {0}".format(error))
-
 
     def SetAutoFocus(self):
         global liveModus,actPosition
@@ -1986,7 +1970,6 @@ class Ui_MainWindow(object):
         self.autoFocusLabel.setText("Auto Focus found")
         self.StartLiveView(0)
 
-
     def Rotation(self):
         global rotationScalar
         rotationScalar = (rotationScalar + 1) % 4
@@ -2037,7 +2020,7 @@ class Ui_MainWindow(object):
 
     ## Initialie the LaserPowerValue
     def powerValue_initialisation(self):
-        global laser2ON,laser1ON,laser3ON,currentLaser,LaserOperatingMode,LaserPulseMOdulation
+        global laserON,currentLaser,LaserOperatingMode,LaserPulseMOdulation,laserPackList
         self.comboBox_7.clear()
         self.comboBox_6.clear()
 
@@ -2048,89 +2031,31 @@ class Ui_MainWindow(object):
         for item in range(len(LaserPulseMOdulation) - 1):
             self.comboBox_6.addItem(list(LaserPulseMOdulation.keys())[item])
 
-        if (currentLaser == 1):
-            if (laser1ON == False):
-                if Controller.LaserOn(LASER['blue']):
-                    try:
-                        self.comboBox_6.setCurrentText(Controller.GetModulation(LASER['blue']))
-                        ## ==> SET INITIAL PROGRESS BAR TO (0) ZERO
-                        power_value = Controller.GetLaserPower(LASER['blue'])
-                        self.setValueToProgressbar(power_value)
-                        self.laserSlider.setValue(power_value)
-                        self.laserSlider.setEnabled(True)
+        index = currentLaser -1
+        if (laserON == False):
+            if Controller.LaserOn(laserPackList[index].wavelength, laserPackList[index].specPower):
+                try:
+                    self.comboBox_6.setCurrentText(Controller.GetModulation(laserPackList[index].wavelength, laserPackList[index].specPower))
 
-                        laser1ON = True
+                    ## ==> SET INITIAL PROGRESS BAR TO (0) ZERO
+                    power_value = Controller.GetLaserPower(laserPackList[index].wavelength, laserPackList[index].specPower)
+                    self.setValueToProgressbar(power_value)
+                    self.laserSlider.setValue(power_value)
+                    self.laserSlider.setEnabled(True)
 
-                    except Exception:
-                        self.laserPowerButton.setChecked(False)
+                    laserON = True
 
-            else:
-                if Controller.LaserOff(LASER['blue']):
-                    self.comboBox_7.clear()
-                    self.comboBox_6.clear()
-                    self.setValueToProgressbar(0)
-                    self.laserSlider.setValue(0)
-                    self.laserSlider.setEnabled(False)
-                    laser1ON = False
-
-
-        elif(currentLaser == 2):
-
-            if (laser2ON == False):
-                ## ==> SET INITIAL PROGRESS BAR TO (0) ZERO
-                if Controller.LaserOn(LASER['red']):
-                    try:
-
-                        self.comboBox_6.setCurrentText(Controller.GetModulation(LASER['red']))
-                        power_value = Controller.GetLaserPower(LASER['red'])
-                        self.setValueToProgressbar(power_value)
-                        self.laserSlider.setValue(power_value)
-                        self.laserSlider.setEnabled(True)
-
-                        laser2ON = True
-
-                    except Exception:
-                        self.laserPowerButton.setChecked(False)
-
-            else:
-
-                if Controller.LaserOff(LASER['red']):
-                    self.comboBox_7.clear()
-                    self.comboBox_6.clear()
-                    self.setValueToProgressbar(0)
-                    self.laserSlider.setValue(0)
-                    self.laserSlider.setEnabled(False)
-                    laser2ON = False
+                except Exception:
+                    self.laserPowerButton.setChecked(False)
 
         else:
-            self.comboBox_6.addItem("Digital and Analog modulation active")
-
-            if (laser3ON == False):
-                ## ==> SET INITIAL PROGRESS BAR TO (0) ZERO
-                if Controller.LaserOn(LASER['purple']):
-                    try:
-
-                        self.comboBox_6.setCurrentText(Controller.GetModulation(LASER['purple']))
-                        power_value = Controller.GetLaserPower(LASER['purple'])
-                        self.setValueToProgressbar(power_value)
-                        self.laserSlider.setValue(power_value)
-                        self.laserSlider.setEnabled(True)
-
-                        laser3ON = True
-                        print("Laser 3 ist On")
-
-                    except Exception:
-                        self.laserPowerButton.setChecked(False)
-
-            else:
-
-                if Controller.LaserOff(LASER['purple']):
-                    self.comboBox_7.clear()
-                    self.comboBox_6.clear()
-                    self.setValueToProgressbar(0)
-                    self.laserSlider.setValue(0)
-                    self.laserSlider.setEnabled(False)
-                    laser3ON = False
+            if Controller.LaserOff(laserPackList[index].wavelength, laserPackList[index].specPower):
+                self.comboBox_7.clear()
+                self.comboBox_6.clear()
+                self.setValueToProgressbar(0)
+                self.laserSlider.setValue(0)
+                self.laserSlider.setEnabled(False)
+                laserON = False
 
 
 
@@ -2254,7 +2179,6 @@ class Ui_MainWindow(object):
         # APPLY STYLESHEET WITH NEW VALUES
         self.circularProgressCPU.setStyleSheet(newStylesheet)
 
-
     def slideLeftMenu(self):
         # Get current left menu width
         width = self.left_side_menu.width()
@@ -2277,19 +2201,17 @@ class Ui_MainWindow(object):
         self.animation.start()
 
     def closeEvent(self, event):
-        global laser1ON, laser2ON, liveModus
+        global laserON , liveModus,currentLaser,laserPackList
         close = QMessageBox.question(self,
                                      "QUIT",
                                      "Sure?",
                                      QMessageBox.Yes | QMessageBox.No)
         if close == QMessageBox.Yes:
             event.accept()
-            if laser1ON:
-                Controller.LaserOff(LASER['blue'])
-            if laser2ON:
-                Controller.LaserOff(LASER['red'])
-            if laser3ON:
-                Controller.LaserOff(LASER['purple'])
+            if laserON:
+                index = currentLaser -1
+                Controller.LaserOff(laserPackList[index].wavelength, laserPackList[index].specPower)
+
             if liveModus:
                 liveModus = False
 
@@ -2318,11 +2240,8 @@ class Ui_MainWindow(object):
         self.focusDownButton.setText(_translate("MainWindow", "Use as focus Down "))
         self.focusDown_label.setText(_translate("MainWindow", "Click to store Focus"))
         self.laserLabel.setText(_translate("MainWindow", "Laser 1"))
-
-        self.wavelengthInfo.setText(
-            _translate("MainWindow", "<html><head/><body><p>WaveLength = 488mm<br/></p></body></html>"))
         self.laser1_percentage.setText(_translate("MainWindow",
-                                                  "<p align=\"center\"><span style=\" font-size:50pt;\">0</span><span style=\" font-size:40pt; vertical-align:super;\">%</span></p>"))
+                                                 "<p align=\"center\"><span style=\" font-size:50pt;\">0</span><span style=\" font-size:40pt; vertical-align:super;\">%</span></p>"))
 
 
 

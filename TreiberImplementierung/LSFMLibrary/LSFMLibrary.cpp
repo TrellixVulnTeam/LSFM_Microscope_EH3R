@@ -6,16 +6,7 @@
 #include <iostream>
 #include <String>
 #include <vector>
-#include "Component.h"
-#include "GlobalFunctions.h"
-#include "LSFM_Camera.h"
-#include "LSFM_Laser.h"
-#include "ILaserController.h"
-#include "LSFM_Motion_PI.h"
-#include "Composite.h"
-#include "ICameraController.h"
-#include "IFilterController.h"
-#include "XagylFilter.h"
+
 
 // DLL internal state variables:
 static unsigned long long previous_;  // Previous value, if any
@@ -27,6 +18,9 @@ static unsigned index_;               // Current seq. position
 HANDLE cameraPointer, flimCameraPointer, cameraRecorderPointer, flimCameraRecorderPointer;
 
 vector<LSFM_Motion_PI> controllers;
+
+vector<LSFM_Laser> lasersList;
+
 Composite microscope;
 
 LSFM_Camera camera;
@@ -46,39 +40,25 @@ ICameraController* pmicIm_1;
 ICameraController* pmicIm_2;
 
 
-LSFM_Laser l1("\\\\.\\COM11");
-LSFM_Laser l2("\\\\.\\COM12");
-LSFM_Laser l3("\\\\.\\COM15");
-
-Component* laserComponent1 = static_cast<Component*>(&l1);
-Component* laserComponent2 = static_cast<Component*>(&l2);
-Component* laserComponent3 = static_cast<Component*>(&l3);
-
-
-
-ILaserController* pmlaser;
-ILaserController* pmlaser2;
-ILaserController* pmlaser3;
-
 vector<IMotionController*>motions;
+
 
 
 vector<ILaserController*>lasers;
 
 
 
-vector<WORD*> bufferList;
-
-//const char* laserConfigFile = "C:\\LSFM_Software\\TreiberImplementierung\\LSFMLibrary\\LaserConfigFile.txt";
-
-const char* motionsConfigFile = "C:\\LSFM_Software\\TreiberImplementierung\\LSFMLibrary\\ConfigFile.txt";
 
 void Connect()
 
 {
 	try
 	{
+
+		/*
 		
+		const char* motionsConfigFile = "C:\\LSFM_Software\\TreiberImplementierung\\LSFMLibrary\\ConfigFile.txt";
+
        
 		cout << "Connection in loading" << endl;
 		char szUSB[300];
@@ -92,10 +72,12 @@ void Connect()
 
 
 		}
+		*/
 		
-		
-		/*
-		vector<LSFM_Laser> lasersList = LaserPortDetection(laserConfigFile);
+		const char* laserConfigFile = "C:\\LSFM_Software\\TreiberImplementierung\\LSFMLibrary\\LaserConfigFile.txt";
+
+		lasersList = LaserPortDetection(laserConfigFile);
+
 
 		if (lasersList.size())
 		{
@@ -106,9 +88,7 @@ void Connect()
 				microscope.add(p1);
 
 			}
-			//pmlaser1 = static_cast<ILaserController*>(&lasersList.at(0));
-			//pmlaser2 = static_cast<ILaserController*>(&lasersList.at(1));
-			//pmlaser3 = static_cast<ILaserController*>(&lasersList.at(2));
+			
 
 		}
 		else
@@ -117,14 +97,11 @@ void Connect()
 			cout << "Please check your device" << endl;
 		}
 		
-		*/
+		
 
-		//microscope.add(cameraComponent);
-		//printf("Camera was succesfful added to the Composite \n ");
+		
 
-		microscope.add(laserComponent1);
-		microscope.add(laserComponent2);
-		microscope.add(laserComponent3);
+		
 
 		microscope.add(cameraComponent);
 		printf("PCO edge  Camera was succesfful added to the Composite \n");
@@ -132,9 +109,7 @@ void Connect()
 		microscope.add(flimCameraComponent);
 		printf("Flim Camera was succesfful added to the Composite \n ");
 
-		pmlaser = static_cast<ILaserController*>(&l1);
-		pmlaser2 = static_cast<ILaserController*>(&l2);
-		pmlaser3 = static_cast<ILaserController*>(&l3);
+		
 
 		pmicIm_1 = static_cast<ICameraController*> (&camera);
 
@@ -213,6 +188,7 @@ void MoveAbsolut(int stage, double position, bool acquisitionRunning)
 
 
 	}
+	
 	for (int i = 0; i < controllers.size(); i++)
 	{
 		if (motions.at(i)->GetStage() == stage)
@@ -266,62 +242,64 @@ void MoveRelativ(int stage, double position, bool acquisitionRunning)
 
 }
 
-void LaserOn(int wavelength)
+void LaserOn(int wavelength, int specPower)
 {
-	/*
 	
 	for (int i = 0; i < lasers.size(); i++)
 	{
-		
-		if (lasers.at(i)->ReadWaveLength() == wavelength)
+        		
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			lasers.at(i)->LaserOn();
 			break;
 		}
 		
 	}
-	*/
-
-
-	if (pmlaser->ReadWaveLength() == wavelength)
-		pmlaser->LaserOn();
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		pmlaser2->LaserOn();
-	else if (pmlaser3->ReadWaveLength() == wavelength)
-		pmlaser3->LaserOn();
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
 	
 }
 
-void LaserOff(int wavelength)
+void LaserOff(int wavelength, int specPower)
 {
-	/*
-	for (int i = 0; i < lasers.size(); i++)
+	
+	for (int i = 0; i < lasersList.size(); i++)
 	{
-		if (lasers.at(i)->ReadWaveLength() == wavelength)
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			lasers.at(i)->LaserOff();
 			break;
 		}
 
 	}
-	*/
-	if (pmlaser->ReadWaveLength() == wavelength)
-		pmlaser->LaserOff();
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		pmlaser2->LaserOff();
-	else if (pmlaser3->ReadWaveLength() == wavelength)
-		pmlaser3->LaserOff();
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
-
+	
 }
 
 
 void Disconnect()
 {
 	microscope.Disconnect();
+
+	for (int i = 0; i < controllers.size(); i++)
+		{
+			Component* p1 = static_cast<Component*> (&controllers.at(i));
+			microscope.remove(p1);
+		}
+
+	for (int i = 0; i < lasersList.size(); i++)
+	{
+		Component* p1 = static_cast<Component*> (&lasersList.at(i));
+		microscope.remove(p1);
+	}
+
+
+	microscope.remove(cameraComponent);
+
+	microscope.remove(flimCameraComponent);
+
+	microscope.remove(pFilter);
+
+	motions.clear();
+
+	lasers.clear();
 }
 
 bool SingleImageAquisition(int cameratyp, char* filename)
@@ -377,15 +355,20 @@ void  GetExposureTime(int camera, int* exposureTime, int* delay)
 }
 
 
-int GetActualModulation(int wavelength)
+int GetActualModulation(int wavelength, int specPower)
 {
 	int actualModulation = 0;
-	if (pmlaser->ReadWaveLength() == wavelength)
-		actualModulation = pmlaser->GetActualModulation();
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		actualModulation = pmlaser2->GetActualModulation();
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
+
+
+	for (int i = 0; i < lasersList.size(); i++)
+	{
+		if (lasers.at(i)->ReadWaveLength() == wavelength)
+		{
+			actualModulation = lasers.at(i)->GetActualModulation(); 
+			break;
+		}
+
+	}
 
 	return actualModulation;
 }
@@ -408,12 +391,12 @@ void SetExposureTime(int camera, int exposureTime, int delay)
 	}
 }
 
-int GetModulation(int wavelength)
+int GetModulation(int wavelength, int specPower)
 {
 	int operatingMode = 0;
-	for (int i = 0; i < lasers.size(); i++)
+	for (int i = 0; i < lasersList.size(); i++)
 	{
-		if (lasers.at(i)->ReadWaveLength() == wavelength)
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			operatingMode = lasers.at(i)->GetModulation();
 			break;
@@ -426,123 +409,116 @@ int GetModulation(int wavelength)
 }
 
 
-double GetPowerInPercentage(int wavelength)
+ bool GetWaveLengthAndSpecPower(Laserpack* LaserList)
+{
+
+
+	 for (int i = 0; i < lasersList.size(); i++)
+	 {
+
+
+		 Laserpack laserpack;
+		 if (lasers.at(i)->IsHardwareConnected())
+		 {
+			 laserpack.waveLegnth = lasers.at(i)->ReadWaveLength();
+			 laserpack.specPower = lasers.at(i)->ReadSpecPower();
+			 LaserList[i] = laserpack;
+		 }
+
+	 }
+
+
+	return true;
+}
+
+
+double GetPowerInPercentage(int wavelength, int specPower)
 {
 	double power = 0;
 
-	/*
 
-	for (int i = 0; i < lasers.size(); i++)
+	for (int i = 0; i < lasersList.size(); i++)
 	{
-		if (lasers.at(i)->ReadWaveLength() == wavelength)
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			power = lasers.at(i)->GetPowerInpercentage();
+
 			break;
 		}
 
 	}
-	*/
-
-	if (pmlaser->ReadWaveLength() == wavelength)
-		power = pmlaser->GetPowerInpercentage();
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		power = pmlaser2->GetPowerInpercentage();
-	else if (pmlaser3->ReadWaveLength() == wavelength)
-		power = pmlaser3->GetPowerInpercentage();
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
+	
 
 	return power;
 }
 
 
-double ReadMaxPower(int wavelength)
+double ReadMaxPower(int wavelength, int specPower)
 {
 	double maxPower = 0;
 
+	for (int i = 0; i < lasersList.size(); i++)
+	{
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
+		{
+			maxPower = lasers.at(i)->ReadMaxPower();
+			break;
+		}
 
-	if (pmlaser->ReadWaveLength() == wavelength)
-		maxPower = pmlaser->ReadMaxPower();
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		maxPower = pmlaser2->ReadMaxPower();
-	else if (pmlaser3->ReadWaveLength() == wavelength)
-		maxPower = pmlaser3->ReadMaxPower();
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
+	}
 
 
 	return maxPower;
 }
 
 
-void ReadWaveLength(int* wavelengths)
+
+void SetModulation(int wavelength, int specPower, int modulation)
 {
-	int waveLength1 = pmlaser->ReadWaveLength();
-	int waveLength2 = pmlaser2->ReadWaveLength();
-	int waveLength3 = pmlaser3->ReadWaveLength();
 	
-
-	wavelengths[0] = waveLength1;
-	wavelengths[1] = waveLength2;
-}
-
-void SetModulation(int wavelength, int modulation)
-{
-	/*
-	for (int i = 0; i < lasers.size(); i++)
+	for (int i = 0; i < lasersList.size(); i++)
 	{
-		if (lasers.at(i)->ReadWaveLength() == wavelength)
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			lasers.at(i)->SetModulation(modulation);
 			break;
 		}
 
-	}*/
+	}
 
-	if (pmlaser->ReadWaveLength() == wavelength)
-		pmlaser->SetModulation(modulation);
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		pmlaser2->SetModulation(modulation);
-	else if (pmlaser3->ReadWaveLength() == wavelength)
-		pmlaser3->SetModulation(modulation);
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
-
+	
 }
 
-void SetOperatingMode(int wavelength, int operantingMode)
+void SetOperatingMode(int wavelength, int specPower,  int operantingMode)
 {
-	if (pmlaser->ReadWaveLength() == wavelength)
-		pmlaser->SetOperatingMode(operantingMode);
-	else if (pmlaser2->ReadWaveLength() == wavelength)
-		pmlaser2->SetOperatingMode(operantingMode);
-	else if (pmlaser3->ReadWaveLength() == wavelength)
-		pmlaser3->SetOperatingMode(operantingMode);
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
-}
 
-void SetPower(int value, float power)
-{
-	/*
-	for (int i = 0; i < lasers.size(); i++)
+	for (int i = 0; i < lasersList.size(); i++)
 	{
-		if (lasers.at(i)->ReadWaveLength() == value)
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
+		{
+			lasers.at(i)->SetOperatingMode(operantingMode);
+			break;
+		}
+
+	}
+
+	
+}
+
+void SetPower(int wavelength, int specPower, float power)
+{
+	
+	for (int i = 0; i < lasersList.size(); i++)
+	{
+		if (lasers.at(i)->ReadWaveLength() == wavelength && lasers.at(i)->ReadSpecPower() == specPower)
 		{
 			lasers.at(i)->SetPower(power);
 			break;
 		}
 
-	}*/
+	}
 
-	if (pmlaser->ReadWaveLength() == value)
-		pmlaser->SetPower(power);
-	else if (pmlaser2->ReadWaveLength() == value)
-		pmlaser2->SetPower(power);
-	else if (pmlaser3->ReadWaveLength() == value)
-		pmlaser3->SetPower(power);
-	else
-		cout << "The entry value has not been recognized, please enter a good value." << endl;
+	
 }
 
 DataPack* LiveView(int camera)
@@ -586,6 +562,7 @@ bool SetFlimParamter(int camera , int phaseNumber, int frequency)
 	
 
 }
+
 
 
 void Image_Sequence(int cameraType, const char* path, double zUp, double zDown, double xValue, double yValue, double focusUp, double focusDown, int N, double dz, int phaseNumber)
@@ -832,7 +809,7 @@ void ListNotConnectedHardware(char* arraylist)
 
 	}
 
-
+	/*
 	response = pmlaser->IsHardwareConnected();
 	if (!response)
 	{
@@ -843,7 +820,7 @@ void ListNotConnectedHardware(char* arraylist)
 
 	}
 
-
+	*/
 
 	response = pmicIm_1->IsHardwareConnected();
 	if (response)
